@@ -118,7 +118,7 @@ const data_items = {
     { name: "Leviathan Crown", img: "./images/Leviathan_Crown.png" },
     { name: "Dragon Mantle", img: "./images/Dragon_Mantle.png" },
     { name: "Holiday Cloak", img: "./images/Holiday_Cloak.png" },
-    { name: "50B Party Hat", img: "./images/50B_Party_Hat.png" },
+    { name: "50B Party Hat", img: "./images/50b_Party_Hat.png" },
     { name: "Dark Coat", img: "./images/Dark_Coat.png" },
     { name: "Celestial Helmet", img: "./images/Celestial_Helmet.png" },
     { name: "Coven Witch Hat", img: "./images/Coven_Witch_Hat.webp" },
@@ -250,7 +250,7 @@ const data_fruits = {
   ],
 
   info: {
-    text_label: "Espadas coletadas:"
+    text_label: "Frutas coletadas:"
   }
 };
 
