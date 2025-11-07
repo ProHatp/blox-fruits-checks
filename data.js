@@ -1124,16 +1124,16 @@ const data_fish_local = {
         { id: 40, name: "Swamp Lurker", img: "./assets/imgs/Swamp_Lurker.png", details: { location: "Whirlpool", bait: "Any", min: "76kg", max: "210kg" } },
         { id: 50, name: "Lumo Whale", img: "./assets/imgs/Lumo_Whale.png", details: { location: "Whirlpool", bait: "Any", min: "110kg", max: "376kg" } },
         { id: 51, name: "Deepsea Octopus", img: "./assets/imgs/Deepsea_Octopus.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "???" } },
-        { id: 52, name: "Jack-O-Fish", img: "./assets/imgs/JackOFish.png", details: { location: "Any", bait: "Any (Easier with Abyssal Bait)", min: "6kg", max: "41kg" } }
+        { id: 52, name: "Jack-O-Fish", img: "./assets/imgs/Jack-O-Fish.png", details: { location: "Any", bait: "Any (Easier with Abyssal Bait)", min: "6kg", max: "41kg" } }
     ],
 
     legendary: [
         { id: 16, name: "Frostjaw", img: "./assets/imgs/Frostjaw.png", details: { location: "Frozen Village, Snow Mountain, Frozen Dimension", bait: "Any (Easier with Frozen Bait)", min: "25kg", max: "172kg" } },
         { id: 21, name: "Azure Marlin", img: "./assets/imgs/Azure_Marlin.png", details: { location: "Hydra Island, Kitsune Island", bait: "Any (Easier with Epic Bait)", min: "72kg", max: "483kg" } },
         { id: 23, name: "Deepglow Oarfish", img: "./assets/imgs/Deepglow_Oarfish.png", details: { location: "Cursed Ship (Glitched Out)", bait: "Abyssal Bait", min: "18kg", max: "121kg" } },
-        { id: 25, name: "Angler (Fish)", img: "./assets/imgs/Angler_(Fish).png", details: { location: "Cursed Ship, Haunted Castle", bait: "Abyssal Bait", min: "4kg", max: "32kg" } },
+        { id: 25, name: "Angler (Fish)", img: "./assets/imgs/Angler.png", details: { location: "Cursed Ship, Haunted Castle", bait: "Abyssal Bait", min: "4kg", max: "32kg" } },
         { id: 28, name: "Rock Dweller", img: "./assets/imgs/Rock_Dweller.png", details: { location: "Magma Village, Prehistoric Island", bait: "Any (Easier with Epic Bait)", min: "21kg", max: "145kg" } },
-        { id: 45, name: "Deepsea Squid", img: "./assets/imgs/Deepsea_Squid.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "33.44kg" } },
+        { id: 45, name: "Deepsea Squid", img: "./assets/imgs/Deapsea_squid.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "33.44kg" } },
         { id: "??", name: "Vampire Squid", img: "./assets/imgs/Vampire_Squid.png", details: { location: "???", bait: "???", min: "???", max: "???" } }
     ],
 
@@ -1152,5 +1152,107 @@ const data_fish_local = {
 
     info: {
         text_label: "Peixes coletados:"
+    }
+};
+
+const data_fishing_rods = {
+    common: [
+        { 
+            name: "Vara de Pesca (Fishing Rod)", 
+            img: "./assets/imgs/Fishing_Rod.png", 
+            details: { 
+                recipe: "Nenhum", 
+                source: "Pescador (Fisherman)", 
+                sea: "Primeiro Mar (First Sea)", 
+                trust: "N/A" 
+            } 
+        }
+    ],
+
+    uncommon: [
+        { 
+            name: "Vara de Ouro (Gold Rod)", 
+            img: "./assets/imgs/Gold_Rod.png", 
+            details: { 
+                recipe: "500.000$ + 4x Prancha de Madeira (Wooden Plank) + 3x Sucata Metálica (Scrap Metal)", 
+                source: "Pescador (Angler)", 
+                sea: "Primeiro Mar (First Sea)", 
+                trust: "10" 
+            } 
+        },
+        { 
+            name: "Vara de Tubarão (Shark Rod)", 
+            img: "./assets/imgs/Shark_Rod.png", 
+            details: { 
+                recipe: "1x Meteorito (Meteorite) + 1.000 Fragmentos + 5x Presa de Vampiro (Vampire Fang) + 7x Prancha de Madeira (Wooden Plank)", 
+                source: "Pescador (Angler)", 
+                sea: "Segundo Mar (Second Sea)", 
+                trust: "10" 
+            } 
+        }
+    ],
+
+    rare: [
+        { 
+            name: "Vareta de Concha (Shell Rod)", 
+            img: "./assets/imgs/Shell_Rod.png", 
+            details: { 
+                recipe: "2x Dente Mutante (Mutant Tooth) + 2.000 Fragmentos + 8x Gota Mística (Mystic Droplet) + 10x Prancha de Madeira (Wooden Plank)", 
+                source: "Pescador (Angler)", 
+                sea: "Terceiro Mar (Third Sea)", 
+                trust: "40" 
+            } 
+        }
+    ],
+
+    legendary: [
+        { 
+            name: "Concha (Celestial)", 
+            img: "./assets/imgs/Shell_(Celestial).png", 
+            details: { 
+                recipe: "500x Símbolo Celestial (Celestial Token)", 
+                source: "Pescador Celestial (Celestial Fisherman)", 
+                sea: "Domínio Celestial (Celestial Domain)", 
+                trust: "N/A" 
+            } 
+        },
+        { 
+            name: "Tubarão (Corrompido)", 
+            img: "./assets/imgs/Shark_(Corrupted).png", 
+            details: { 
+                recipe: "500x Token Oni (Oni Token)", 
+                source: "Pescador Oni (Oni Fisherman)", 
+                sea: "Reino Oni (Oni Realm)", 
+                trust: "N/A" 
+            } 
+        },
+        { 
+            name: "Vara do Tesouro (Treasure Rod)", 
+            img: "./assets/imgs/Treasure_Rod.png", 
+            details: { 
+                recipe: "1x Fractal de Espelho (Mirror Fractal) + 10x Escala Leviatã (Leviathan Scale) + 3.000 Fragmentos + 10x Ouro de Tolo (Fool's Gold)", 
+                source: "Pescador (Angler)", 
+                sea: "Terceiro Mar (Third Sea)", 
+                trust: "45 (Nível 65+ em Pesca necessário.)" 
+            } 
+        }
+    ],
+
+    mythical: [
+        { 
+            name: "Rod Administrativo (Admin Rod)", 
+            img: "./assets/imgs/Admin_Rod.png", 
+            details: { 
+                recipe: "N/A", 
+                source: "Exclusivo para administradores", 
+                sea: "N/A", 
+                trust: "N/A" 
+            } 
+        }
+    ],
+
+    info: {
+        text_label: "Varas de Pesca Coletadas:",
+        trust_label: "Confiança Mínima Necessária"
     }
 };

@@ -318,3 +318,126 @@ function updateFishCounter(c_data_items, counts, total, checked) {
     ⬛ Desconhecidos: ${counts.unknown.collected}/${counts.unknown.total}
   `;
 }
+
+function renderFishingRods(c_data_items) {
+  const saved = JSON.parse(localStorage.getItem("rods_collection") || "[]");
+  const rarities = ["common", "uncommon", "rare", "legendary", "mythical"];
+  let total = 0, collected = 0;
+  const counts = {};
+
+  // ====== BARRA DE PESQUISA ======
+  const searchBox = document.createElement("div");
+  searchBox.className = "search-box";
+  searchBox.innerHTML = `
+    <input type="text" id="searchInput" placeholder="🔍 Buscar vara por nome ou mar...">
+  `;
+
+  // Insere a barra logo após o <header>, sem depender de .header_distance
+  const header = document.querySelector("header");
+  if (header && header.parentNode) {
+    header.parentNode.insertBefore(searchBox, header.nextSibling);
+  } else {
+    document.body.prepend(searchBox);
+  }
+
+  // ====== RENDERIZAÇÃO POR RARIDADE ======
+  rarities.forEach((r) => {
+    const section = document.getElementById(r);
+    if (!section) return;
+
+    const list = document.createElement("div");
+    list.className = "rod-list";
+
+    let count_rarity = 0;
+
+    c_data_items[r].forEach((rod) => {
+      total++;
+      const item = document.createElement("div");
+      item.className = "rod-item";
+      item.dataset.name = rod.name.toLowerCase();
+      item.dataset.sea = rod.details.sea.toLowerCase();
+
+      if (saved.includes(rod.name)) {
+        item.classList.add("checked");
+        collected++;
+        count_rarity++;
+      }
+
+      item.innerHTML = `
+        <div class="rod-header">
+          <img src="${rod.img}" alt="${rod.name}">
+          <div class="rod-title">
+            <strong>${rod.name}</strong>
+            <small class="rarity-label">${r.toUpperCase()}</small>
+          </div>
+        </div>
+        <div class="rod-details">
+          <p><strong>⚙️ Receita:</strong> ${rod.details.recipe}</p>
+          <p><strong>👤 Fonte:</strong> ${rod.details.source}</p>
+          <p><strong>🌊 Mar:</strong> ${rod.details.sea}</p>
+          <p><strong>🤝 Confiança:</strong> ${rod.details.trust}</p>
+        </div>
+      `;
+
+      // Clique para marcar como coletada
+      item.addEventListener("click", () => {
+        item.classList.toggle("checked");
+        const cur = JSON.parse(localStorage.getItem("rods_collection") || "[]");
+        if (item.classList.contains("checked")) {
+          if (!cur.includes(rod.name)) cur.push(rod.name);
+        } else {
+          const i = cur.indexOf(rod.name);
+          if (i > -1) cur.splice(i, 1);
+        }
+        localStorage.setItem("rods_collection", JSON.stringify(cur));
+        updateRodsCounter(c_data_items);
+      });
+
+      list.appendChild(item);
+    });
+
+    counts[r] = { total: c_data_items[r].length, collected: count_rarity };
+    section.appendChild(list);
+  });
+
+  // ====== PESQUISA ======
+  const searchInput = document.getElementById("searchInput");
+  searchInput.addEventListener("input", (e) => {
+    const query = e.target.value.toLowerCase().trim();
+    document.querySelectorAll(".rod-item").forEach((item) => {
+      const nameMatch = item.dataset.name.includes(query);
+      const seaMatch = item.dataset.sea.includes(query);
+      item.style.display = query === "" || nameMatch || seaMatch ? "block" : "none";
+    });
+  });
+
+  updateRodsCounter(c_data_items, counts, total, collected);
+}
+
+// ====== CONTADOR ======
+function updateRodsCounter(c_data_items, counts, total, collected) {
+  const saved = JSON.parse(localStorage.getItem("rods_collection") || "[]");
+  const rarities = ["common", "uncommon", "rare", "legendary", "mythical"];
+
+  collected = 0;
+  total = 0;
+  counts = {};
+
+  rarities.forEach((r) => {
+    const arr = c_data_items[r] || [];
+    const col = arr.filter((x) => saved.includes(x.name)).length;
+    counts[r] = { total: arr.length, collected: col };
+    total += arr.length;
+    collected += col;
+  });
+
+  const c = document.getElementById("counter");
+  c.innerHTML = `
+    <strong>${c_data_items.info.text_label}</strong> ${collected}/${total}<br>
+    🟦 Comuns: ${counts.common.collected}/${counts.common.total} ·
+    🟩 Incomuns: ${counts.uncommon.collected}/${counts.uncommon.total} ·
+    🟪 Raras: ${counts.rare.collected}/${counts.rare.total} ·
+    🟨 Lendárias: ${counts.legendary.collected}/${counts.legendary.total} ·
+    🟥 Míticas: ${counts.mythical.collected}/${counts.mythical.total}
+  `;
+}

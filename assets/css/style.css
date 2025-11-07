@@ -358,3 +358,67 @@ h2{
   color: #00bfff;
   margin-top: 3px;
 }
+
+.rod-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.rod-item {
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.rod-item:hover {
+  transform: scale(1.02);
+  border-color: #00ff88;
+}
+
+.rod-item.checked {
+  border-color: #00ff88;
+  background: linear-gradient(145deg, #0f3d2e, #002915);
+  box-shadow: 0 0 15px #00ff88aa;
+  animation: pulse 1.5s infinite;
+}
+
+.rod-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rod-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.rod-title strong {
+  font-size: 16px;
+  color: #fff;
+}
+
+.rarity-label {
+  display: inline-block;
+  background: #00ff8840;
+  border: 1px solid #00ff88;
+  border-radius: 5px;
+  padding: 2px 6px;
+  font-size: 11px;
+  margin-top: 3px;
+  color: #00ff88;
+}
+
+.rod-details {
+  margin-top: 10px;
+  color: #bbb;
+  font-size: 13px;
+  line-height: 1.5em;
+}
