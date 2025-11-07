@@ -1076,78 +1076,78 @@ const data_titles = {
 
 const data_fish_local = {
     common: [
-        { name: "Catfish", img: "./assets/imgs/Catfish.png", details: { location: "Any", bait: "Any", min: "3kg", max: "37kg" } },
-        { name: "Carp", img: "./assets/imgs/Carp.png", details: { location: "Any", bait: "Any", min: "2kg", max: "19kg" } },
-        { name: "Redfin", img: "./assets/imgs/Redfin.png", details: { location: "Any", bait: "Any", min: "4kg", max: "30kg" } },
-        { name: "Tidegill", img: "./assets/imgs/Tidegill.png", details: { location: "Any", bait: "Any", min: "3kg", max: "27kg" } },
-        { name: "Saltwater Salmon", img: "./assets/imgs/Saltwater_Salmon.png", details: { location: "Any", bait: "Any", min: "5kg", max: "40kg" } },
-        { name: "Goldfish", img: "./assets/imgs/Goldfish.png", details: { location: "Any", bait: "Any", min: "2kg", max: "20kg" } },
-        { name: "Sea Sturgeon", img: "./assets/imgs/Sea_Sturgeon.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
-        { name: "Grouper", img: "./assets/imgs/Grouper.png", details: { location: "Any", bait: "Any", min: "5kg", max: "44kg" } },
-        { name: "Mossback", img: "./assets/imgs/Mossback.png", details: { location: "Any", bait: "Any", min: "5kg", max: "38kg" } },
-        { name: "Sand Bass", img: "./assets/imgs/Sand_Bass.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
-        { name: "Tuna", img: "./assets/imgs/Tuna.png", details: { location: "Any", bait: "Any", min: "5kg", max: "40kg" } },
-        { name: "Crab", img: "./assets/imgs/Crab.png", details: { location: "Any", bait: "Any", min: "5kg", max: "34kg" } },
-        { name: "Golden Carp", img: "./assets/imgs/Golden_Carp.png", details: { location: "Unobtainable", bait: "Any", min: "1kg", max: "???" } },
-        { name: "Starfish (Yellow)", img: "./assets/imgs/Starfish_(Yellow).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
-        { name: "Starfish (Purple)", img: "./assets/imgs/Starfish_(Purple).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
-        { name: "Starfish (Blue)", img: "./assets/imgs/Starfish_(Blue).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
-        { name: "Starfish (Green)", img: "./assets/imgs/Starfish_(Green).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
-        { name: "Starfish (Pink)", img: "./assets/imgs/Starfish_(Pink).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
-        { name: "Starfish (Red)", img: "./assets/imgs/Starfish_(Red).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } }
+        { id: 2, name: "Catfish", img: "./assets/imgs/Catfish.png", details: { location: "Any", bait: "Any", min: "3kg", max: "37kg" } },
+        { id: 4, name: "Carp", img: "./assets/imgs/Carp.png", details: { location: "Any", bait: "Any", min: "2kg", max: "19kg" } },
+        { id: 6, name: "Redfin", img: "./assets/imgs/Redfin.png", details: { location: "Any", bait: "Any", min: "4kg", max: "30kg" } },
+        { id: 7, name: "Tidegill", img: "./assets/imgs/Tidegill.png", details: { location: "Any", bait: "Any", min: "3kg", max: "27kg" } },
+        { id: 8, name: "Saltwater Salmon", img: "./assets/imgs/Saltwater_Salmon.png", details: { location: "Any", bait: "Any", min: "5kg", max: "40kg" } },
+        { id: 9, name: "Goldfish", img: "./assets/imgs/Goldfish.png", details: { location: "Any", bait: "Any", min: "2kg", max: "20kg" } },
+        { id: 11, name: "Sea Sturgeon", img: "./assets/imgs/Sea_Sturgeon.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
+        { id: 12, name: "Grouper", img: "./assets/imgs/Grouper.png", details: { location: "Any", bait: "Any", min: "5kg", max: "44kg" } },
+        { id: 14, name: "Mossback", img: "./assets/imgs/Mossback.png", details: { location: "Any", bait: "Any", min: "5kg", max: "38kg" } },
+        { id: 24, name: "Sand Bass", img: "./assets/imgs/Sand_Bass.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
+        { id: 33, name: "Tuna", img: "./assets/imgs/Tuna.png", details: { location: "Any", bait: "Any", min: "5kg", max: "40kg" } },
+        { id: 34, name: "Crab", img: "./assets/imgs/Crab.png", details: { location: "Any", bait: "Any", min: "5kg", max: "34kg" } },
+        { id: 38, name: "Golden Carp", img: "./assets/imgs/Golden_Carp.png", details: { location: "Unobtainable", bait: "Any", min: "1kg", max: "???" } },
+        { id: 39, name: "Starfish (Yellow)", img: "./assets/imgs/Starfish_(Yellow).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
+        { id: 42, name: "Starfish (Purple)", img: "./assets/imgs/Starfish_(Purple).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
+        { id: 46, name: "Starfish (Blue)", img: "./assets/imgs/Starfish_(Blue).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
+        { id: 47, name: "Starfish (Green)", img: "./assets/imgs/Starfish_(Green).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
+        { id: 48, name: "Starfish (Pink)", img: "./assets/imgs/Starfish_(Pink).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
+        { id: 49, name: "Starfish (Red)", img: "./assets/imgs/Starfish_(Red).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } }
     ],
 
     uncommon: [
-        { name: "Angelfish", img: "./assets/imgs/Angelfish.png", details: { location: "Any", bait: "Any", min: "6kg", max: "46kg" } },
-        { name: "Flatfish", img: "./assets/imgs/Flatfish.png", details: { location: "Any", bait: "Any", min: "7kg", max: "50kg" } },
-        { name: "Clownfish", img: "./assets/imgs/Clownfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
-        { name: "Amber Trout", img: "./assets/imgs/Amber_Trout.png", details: { location: "Any", bait: "Any", min: "6kg", max: "44kg" } },
-        { name: "Bullfish", img: "./assets/imgs/Bullfish.png", details: { location: "Desert, Forgotten Island, Prehistoric Island", bait: "Any (Easier with Carnivore Bait)", min: "4kg", max: "33kg" } },
-        { name: "Parrotfish", img: "./assets/imgs/Parrotfish.png", details: { location: "Green Zone, Tiki Outpost", bait: "Any (Easier with Kelp Bait)", min: "7kg", max: "48kg" } },
-        { name: "Pufferfish", img: "./assets/imgs/Pufferfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "38kg" } },
-        { name: "Barracuda", img: "./assets/imgs/Barracuda.png", details: { location: "Underwater City", bait: "Any", min: "5kg", max: "35kg" } },
-        { name: "Kelp Bass", img: "./assets/imgs/Kelp_Bass.png", details: { location: "Any", bait: "Any (Easier with Kelp Bait)", min: "5kg", max: "35kg" } },
-        { name: "Colossal Shrimp", img: "./assets/imgs/Colossal_Shrimp.png", details: { location: "Any", bait: "Any", min: "6kg", max: "43kg" } },
-        { name: "Turtle", img: "./assets/imgs/Turtle.png", details: { location: "Whirlpool", bait: "Any", min: "3kg", max: "48kg" } },
-        { name: "Jester Clownfish", img: "./assets/imgs/Jester_Clownfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
-        { name: "Zombie Bass", img: "./assets/imgs/Zombie_Bass.png", details: { location: "Any", bait: "Any (Easier with Carnivore Bait)", min: "5kg", max: "35kg" } },
-        { name: "Soggy Boot", img: "./assets/imgs/Soggy_Boot.png", details: { location: "Any", bait: "Any", min: "N/A", max: "N/A" } }
+        { id: 3, name: "Angelfish", img: "./assets/imgs/Angelfish.png", details: { location: "Any", bait: "Any", min: "6kg", max: "46kg" } },
+        { id: 5, name: "Flatfish", img: "./assets/imgs/Flatfish.png", details: { location: "Any", bait: "Any", min: "7kg", max: "50kg" } },
+        { id: 13, name: "Clownfish", img: "./assets/imgs/Clownfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
+        { id: 15, name: "Amber Trout", img: "./assets/imgs/Amber_Trout.png", details: { location: "Any", bait: "Any", min: "6kg", max: "44kg" } },
+        { id: 18, name: "Bullfish", img: "./assets/imgs/Bullfish.png", details: { location: "Desert, Forgotten Island, Prehistoric Island", bait: "Any (Easier with Carnivore Bait)", min: "4kg", max: "33kg" } },
+        { id: 19, name: "Parrotfish", img: "./assets/imgs/Parrotfish.png", details: { location: "Green Zone, Tiki Outpost", bait: "Any (Easier with Kelp Bait)", min: "7kg", max: "48kg" } },
+        { id: 30, name: "Pufferfish", img: "./assets/imgs/Pufferfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "38kg" } },
+        { id: 31, name: "Barracuda", img: "./assets/imgs/Barracuda.png", details: { location: "Underwater City", bait: "Any", min: "5kg", max: "35kg" } },
+        { id: 32, name: "Kelp Bass", img: "./assets/imgs/Kelp_Bass.png", details: { location: "Any", bait: "Any (Easier with Kelp Bait)", min: "5kg", max: "35kg" } },
+        { id: 36, name: "Colossal Shrimp", img: "./assets/imgs/Colossal_Shrimp.png", details: { location: "Any", bait: "Any", min: "6kg", max: "43kg" } },
+        { id: 44, name: "Turtle", img: "./assets/imgs/Turtle.png", details: { location: "Whirlpool", bait: "Any", min: "3kg", max: "48kg" } },
+        { id: 53, name: "Jester Clownfish", img: "./assets/imgs/Jester_Clownfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
+        { id: 54, name: "Zombie Bass", img: "./assets/imgs/Zombie_Bass.png", details: { location: "Any", bait: "Any (Easier with Carnivore Bait)", min: "5kg", max: "35kg" } },
+        { id: "N/A", name: "Soggy Boot", img: "./assets/imgs/Soggy_Boot.png", details: { location: "Any", bait: "Any", min: "N/A", max: "N/A" } }
     ],
 
     rare: [
-        { name: "Candyfish", img: "./assets/imgs/Candyfish.png", details: { location: "Sea of Treats", bait: "Any", min: "6kg", max: "47kg" } },
-        { name: "Ghostfish", img: "./assets/imgs/Ghostfish.png", details: { location: "Cursed Ship, Haunted Castle, Haunted Shipwreck, Mirage Island", bait: "Abyssal Bait, Epic Bait", min: "6kg", max: "41kg" } },
-        { name: "Leafy Trout", img: "./assets/imgs/Leafy_Trout.png", details: { location: "Green Zone, Floating Turtle, Great Tree", bait: "Any (Easier with Kelp Bait and Shark Rod)", min: "6kg", max: "42kg" } },
-        { name: "Molten Trout", img: "./assets/imgs/Molten_Trout.png", details: { location: "Magma Village, Prehistoric Island", bait: "Any (Easier with Carnivore Bait)", min: "5kg", max: "39kg" } },
-        { name: "Gliderfish", img: "./assets/imgs/Gliderfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "36kg" } },
-        { name: "Seahorse", img: "./assets/imgs/Seahorse.png", details: { location: "Any", bait: "Any", min: "7kg", max: "48kg" } },
-        { name: "Swamp Lurker", img: "./assets/imgs/Swamp_Lurker.png", details: { location: "Whirlpool", bait: "Any", min: "76kg", max: "210kg" } },
-        { name: "Lumo Whale", img: "./assets/imgs/Lumo_Whale.png", details: { location: "Whirlpool", bait: "Any", min: "110kg", max: "376kg" } },
-        { name: "Deepsea Octopus", img: "./assets/imgs/Deepsea_Octopus.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "???" } },
-        { name: "Jack-O-Fish", img: "./assets/imgs/JackOFish.png", details: { location: "Any", bait: "Any (Easier with Abyssal Bait)", min: "6kg", max: "41kg" } }
+        { id: 1, name: "Candyfish", img: "./assets/imgs/Candyfish.png", details: { location: "Sea of Treats", bait: "Any", min: "6kg", max: "47kg" } },
+        { id: 10, name: "Ghostfish", img: "./assets/imgs/Ghostfish.png", details: { location: "Cursed Ship, Haunted Castle, Haunted Shipwreck, Mirage Island", bait: "Abyssal Bait, Epic Bait", min: "6kg", max: "41kg" } },
+        { id: 20, name: "Leafy Trout", img: "./assets/imgs/Leafy_Trout.png", details: { location: "Green Zone, Floating Turtle, Great Tree", bait: "Any (Easier with Kelp Bait and Shark Rod)", min: "6kg", max: "42kg" } },
+        { id: 26, name: "Molten Trout", img: "./assets/imgs/Molten_Trout.png", details: { location: "Magma Village, Prehistoric Island", bait: "Any (Easier with Carnivore Bait)", min: "5kg", max: "39kg" } },
+        { id: 27, name: "Gliderfish", img: "./assets/imgs/Gliderfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "36kg" } },
+        { id: 35, name: "Seahorse", img: "./assets/imgs/Seahorse.png", details: { location: "Any", bait: "Any", min: "7kg", max: "48kg" } },
+        { id: 40, name: "Swamp Lurker", img: "./assets/imgs/Swamp_Lurker.png", details: { location: "Whirlpool", bait: "Any", min: "76kg", max: "210kg" } },
+        { id: 50, name: "Lumo Whale", img: "./assets/imgs/Lumo_Whale.png", details: { location: "Whirlpool", bait: "Any", min: "110kg", max: "376kg" } },
+        { id: 51, name: "Deepsea Octopus", img: "./assets/imgs/Deepsea_Octopus.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "???" } },
+        { id: 52, name: "Jack-O-Fish", img: "./assets/imgs/JackOFish.png", details: { location: "Any", bait: "Any (Easier with Abyssal Bait)", min: "6kg", max: "41kg" } }
     ],
 
     legendary: [
-        { name: "Frostjaw", img: "./assets/imgs/Frostjaw.png", details: { location: "Frozen Village, Snow Mountain, Frozen Dimension", bait: "Any (Easier with Frozen Bait)", min: "25kg", max: "172kg" } },
-        { name: "Azure Marlin", img: "./assets/imgs/Azure_Marlin.png", details: { location: "Hydra Island, Kitsune Island", bait: "Any (Easier with Epic Bait)", min: "72kg", max: "483kg" } },
-        { name: "Deepglow Oarfish", img: "./assets/imgs/Deepglow_Oarfish.png", details: { location: "Cursed Ship (Glitched Out)", bait: "Abyssal Bait", min: "18kg", max: "121kg" } },
-        { name: "Angler (Fish)", img: "./assets/imgs/Angler_(Fish).png", details: { location: "Cursed Ship, Haunted Castle", bait: "Abyssal Bait", min: "4kg", max: "32kg" } },
-        { name: "Rock Dweller", img: "./assets/imgs/Rock_Dweller.png", details: { location: "Magma Village, Prehistoric Island", bait: "Any (Easier with Epic Bait)", min: "21kg", max: "145kg" } },
-        { name: "Deepsea Squid", img: "./assets/imgs/Deepsea_Squid.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "33.44kg" } },
-        { name: "Vampire Squid", img: "./assets/imgs/Vampire_Squid_(Held).png", details: { location: "???", bait: "???", min: "???", max: "???" } }
+        { id: 16, name: "Frostjaw", img: "./assets/imgs/Frostjaw.png", details: { location: "Frozen Village, Snow Mountain, Frozen Dimension", bait: "Any (Easier with Frozen Bait)", min: "25kg", max: "172kg" } },
+        { id: 21, name: "Azure Marlin", img: "./assets/imgs/Azure_Marlin.png", details: { location: "Hydra Island, Kitsune Island", bait: "Any (Easier with Epic Bait)", min: "72kg", max: "483kg" } },
+        { id: 23, name: "Deepglow Oarfish", img: "./assets/imgs/Deepglow_Oarfish.png", details: { location: "Cursed Ship (Glitched Out)", bait: "Abyssal Bait", min: "18kg", max: "121kg" } },
+        { id: 25, name: "Angler (Fish)", img: "./assets/imgs/Angler_(Fish).png", details: { location: "Cursed Ship, Haunted Castle", bait: "Abyssal Bait", min: "4kg", max: "32kg" } },
+        { id: 28, name: "Rock Dweller", img: "./assets/imgs/Rock_Dweller.png", details: { location: "Magma Village, Prehistoric Island", bait: "Any (Easier with Epic Bait)", min: "21kg", max: "145kg" } },
+        { id: 45, name: "Deepsea Squid", img: "./assets/imgs/Deepsea_Squid.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "33.44kg" } },
+        { id: "??", name: "Vampire Squid", img: "./assets/imgs/Vampire_Squid.png", details: { location: "???", bait: "???", min: "???", max: "???" } }
     ],
 
     mythical: [
-        { name: "Gravelhead Shark", img: "./assets/imgs/Gravelhead_Shark.png", details: { location: "Prehistoric Island", bait: "Carnivore Bait", min: "148kg", max: "989kg" } },
-        { name: "Terrorfish", img: "./assets/imgs/Terrorfish.png", details: { location: "Prehistoric Island, Tiki Outpost, Frozen Dimension", bait: "Carnivore Bait, Epic Bait", min: "28kg", max: "190kg" } },
-        { name: "Levi", img: "./assets/imgs/Levi.png", details: { location: "Hydra Island, Submerged Island, Tiki Outpost", bait: "Epic Bait, Frozen Bait", min: "13kg", max: "150kg" } },
-        { name: "Terrorbones", img: "./assets/imgs/Terrorbones.png", details: { location: "Tiki Outpost, Submerged Island, Prehistoric Island", bait: "Carnivore Bait, Abyssal Bait, Frozen Bait", min: "28kg", max: "190kg" } }
+        { id: 17, name: "Gravelhead Shark", img: "./assets/imgs/Gravelhead_Shark.png", details: { location: "Prehistoric Island", bait: "Carnivore Bait", min: "148kg", max: "989kg" } },
+        { id: 22, name: "Terrorfish", img: "./assets/imgs/Terrorfish.png", details: { location: "Prehistoric Island, Tiki Outpost, Frozen Dimension", bait: "Carnivore Bait, Epic Bait", min: "28kg", max: "190kg" } },
+        { id: 29, name: "Levi", img: "./assets/imgs/Levi.png", details: { location: "Hydra Island, Submerged Island, Tiki Outpost", bait: "Epic Bait, Frozen Bait", min: "13kg", max: "150kg" } },
+        { id: 55, name: "Terrorbones", img: "./assets/imgs/Terrorbones.png", details: { location: "Tiki Outpost, Submerged Island, Prehistoric Island", bait: "Carnivore Bait, Abyssal Bait, Frozen Bait", min: "28kg", max: "190kg" } }
     ],
 
     unknown: [
-        { name: "Dragon Koi", img: "./assets/imgs/Dragon_Koi.png", details: { location: "???", bait: "???", min: "???", max: "???" } },
-        { name: "Hermit Crab", img: "./assets/imgs/HermitCrab.png", details: { location: "???", bait: "???", min: "???", max: "???" } },
-        { name: "Jellyfish", img: "./assets/imgs/JellyFish.png", details: { location: "???", bait: "???", min: "???", max: "???" } }
+        { id: 37, name: "Dragon Koi", img: "./assets/imgs/Dragon_Koi.png", details: { location: "???", bait: "???", min: "???", max: "???" } },
+        { id: 41, name: "Hermit Crab", img: "./assets/imgs/HermitCrab.png", details: { location: "???", bait: "???", min: "???", max: "???" } },
+        { id: 43, name: "Jellyfish", img: "./assets/imgs/JellyFish.png", details: { location: "???", bait: "???", min: "???", max: "???" } }
     ],
 
     info: {

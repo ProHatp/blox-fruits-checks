@@ -218,9 +218,8 @@ function renderFish(c_data_items) {
   let total = 0, checked = 0;
   const rarities = ["common", "uncommon", "rare", "legendary", "mythical", "unknown"];
   const counts = {};
-  let idCounter = 1;
 
-  // ====== BARRA DE PESQUISA (igual à dos títulos) ======
+  // ====== BARRA DE PESQUISA ======
   const searchBox = document.createElement("div");
   searchBox.className = "search-box";
   searchBox.innerHTML = `
@@ -228,17 +227,15 @@ function renderFish(c_data_items) {
   `;
   document.body.insertBefore(searchBox, document.querySelector(".header_distance").nextSibling);
 
-  // ====== RENDERIZAÇÃO DOS PEIXES ======
+  // ====== RENDERIZAÇÃO ======
   rarities.forEach((r) => {
     const grid = document.getElementById(r);
     if (!grid) return;
 
     let collected = 0;
     c_data_items[r].forEach((item) => {
-      const fishId = idCounter.toString().padStart(3, "0");
-      item.id = fishId;
-      idCounter++;
       total++;
+      const fishId = item.id.toString().padStart(3, "0");
 
       const card = document.createElement("div");
       card.className = "card";
@@ -262,6 +259,7 @@ function renderFish(c_data_items) {
         </div>
       `;
 
+      // Clique para marcar/desmarcar coletado
       card.addEventListener("click", () => {
         card.classList.toggle("checked");
         const cur = JSON.parse(localStorage.getItem("fish_collection") || "[]");
@@ -280,7 +278,7 @@ function renderFish(c_data_items) {
     counts[r] = { total: c_data_items[r].length, collected };
   });
 
-  // ====== PESQUISA AO DIGITAR (igual titles) ======
+  // ====== PESQUISA AO DIGITAR ======
   const searchInput = document.getElementById("searchInput");
   searchInput.addEventListener("input", (e) => {
     const query = e.target.value.toLowerCase().trim();
