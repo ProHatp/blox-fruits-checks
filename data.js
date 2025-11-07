@@ -197,65 +197,66 @@ const data_swords = {
 
 const data_fruits = {
   common: [
-    { name: "Rocket", img: "./assets/imgs/Rocket_Fruit.png", mestria_level: 0 },
-    { name: "Spin", img: "./assets/imgs/Spin_Fruit.png", mestria_level: 0 },
-    { name: "Blade", img: "./assets/imgs/Blade_Fruit.png", mestria_level: 0 },
-    { name: "Spring", img: "./assets/imgs/Spring_Fruit.png", mestria_level: 0 },
-    { name: "Bomb", img: "./assets/imgs/Bomb_Fruit.png", mestria_level: 0 },
-    { name: "Smoke", img: "./assets/imgs/Smoke_Fruit.png", mestria_level: 0 },
-    { name: "Spike", img: "./assets/imgs/Spike_Fruit.png", mestria_level: 0 }
+    { name: "Rocket", img: "./assets/imgs/Rocket_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Spin", img: "./assets/imgs/Spin_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Blade", img: "./assets/imgs/Blade_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Spring", img: "./assets/imgs/Spring_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Bomb", img: "./assets/imgs/Bomb_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Smoke", img: "./assets/imgs/Smoke_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Spike", img: "./assets/imgs/Spike_Fruit.png", mestria_level: 0, permanent: false }
   ],
 
   uncommon: [
-    { name: "Flame", img: "./assets/imgs/Flame_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Ice", img: "./assets/imgs/Ice_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Sand", img: "./assets/imgs/Sand_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Dark", img: "./assets/imgs/Dark_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Eagle", img: "./assets/imgs/Eagle_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Diamond", img: "./assets/imgs/Diamond_Fruit.png", mestria_level: 0 }
+    { name: "Flame", img: "./assets/imgs/Flame_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Ice", img: "./assets/imgs/Ice_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Sand", img: "./assets/imgs/Sand_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Dark", img: "./assets/imgs/Dark_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Eagle", img: "./assets/imgs/Eagle_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Diamond", img: "./assets/imgs/Diamond_Fruit.png", mestria_level: 0, permanent: false }
   ],
 
   rare: [
-    { name: "Light", img: "./assets/imgs/Light_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Rubber", img: "./assets/imgs/Rubber_Fruit.png", mestria_level: 0 },
-    { name: "Ghost", img: "./assets/imgs/Ghost_Fruit.png", mestria_level: 0 },
-    { name: "Magma", img: "./assets/imgs/Magma_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 }
+    { name: "Light", img: "./assets/imgs/Light_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Rubber", img: "./assets/imgs/Rubber_Fruit.png", mestria_level: 0, permanent: false, permanent: false },
+    { name: "Ghost", img: "./assets/imgs/Ghost_Fruit.png", mestria_level: 0, permanent: false, permanent: false },
+    { name: "Magma", img: "./assets/imgs/Magma_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false }
   ],
 
   legendary: [
-    { name: "Quake", img: "./assets/imgs/Quake_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Buddha", img: "./assets/imgs/Buddha_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Love", img: "./assets/imgs/Love_Fruit.png", mestria_level: 0 },
-    { name: "Creation", img: "./assets/imgs/Creation_Fruit.png", mestria_level: 0 },
-    { name: "Spider", img: "./assets/imgs/Spider_Fruit.png", mestria_level: 0 },
-    { name: "Sound", img: "./assets/imgs/Sound_Fruit.png", mestria_level: 0 },
-    { name: "Phoenix", img: "./assets/imgs/Phoenix_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Portal", img: "./assets/imgs/Portal_Fruit.png", mestria_level: 0 },
+    { name: "Quake", img: "./assets/imgs/Quake_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Buddha", img: "./assets/imgs/Buddha_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Love", img: "./assets/imgs/Love_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Creation", img: "./assets/imgs/Creation_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Spider", img: "./assets/imgs/Spider_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Sound", img: "./assets/imgs/Sound_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Phoenix", img: "./assets/imgs/Phoenix_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Portal", img: "./assets/imgs/Portal_Fruit.png", mestria_level: 0, permanent: false },
 
-    { name: "Lightning", img: "./assets/imgs/Lightning_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Pain", img: "./assets/imgs/Pain_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Blizzard", img: "./assets/imgs/Blizzard_Fruit.png" }
+    { name: "Lightning", img: "./assets/imgs/Lightning_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Pain", img: "./assets/imgs/Pain_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Blizzard", img: "./assets/imgs/Blizzard_Fruit.png", mestria_level: 0, permanent: false }
   ],
 
   mythical: [
-    { name: "Gravity", img: "./assets/imgs/Gravity_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Mammoth", img: "./assets/imgs/Mammoth_Fruit.png", mestria_level: 0 },
-    { name: "T-Rex", img: "./assets/imgs/T-Rex_Fruit.png", mestria_level: 0 },
-    { name: "Dough", img: "./assets/imgs/Dough_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
-    { name: "Shadow", img: "./assets/imgs/Shadow_Fruit.png", mestria_level: 0 },
-    { name: "Venom", img: "./assets/imgs/Venom_Fruit.png", mestria_level: 0 },
-    { name: "Control", img: "./assets/imgs/Control_Fruit.png", mestria_level: 0 },
-    { name: "Gas", img: "./assets/imgs/Gas_Fruit.png", mestria_level: 0 },
-    { name: "Spirit", img: "./assets/imgs/Spirit_Fruit.png", mestria_level: 0 },
-    { name: "Leopard", img: "./assets/imgs/Leopard_Fruit.png", mestria_level: 0 },
-    { name: "Yeti", img: "./assets/imgs/Yeti_Fruit.png", mestria_level: 0 },
-    { name: "Kitsune", img: "./assets/imgs/Kitsune_Fruit.png", mestria_level: 0 },
-    { name: "Dragon", img: "./assets/imgs/Dragon_Fruit.png", mestria_level: 0 }
+    { name: "Gravity", img: "./assets/imgs/Gravity_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Mammoth", img: "./assets/imgs/Mammoth_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "T-Rex", img: "./assets/imgs/T-Rex_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Dough", img: "./assets/imgs/Dough_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
+    { name: "Shadow", img: "./assets/imgs/Shadow_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Venom", img: "./assets/imgs/Venom_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Control", img: "./assets/imgs/Control_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Gas", img: "./assets/imgs/Gas_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Spirit", img: "./assets/imgs/Spirit_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Leopard", img: "./assets/imgs/Leopard_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Yeti", img: "./assets/imgs/Yeti_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Kitsune", img: "./assets/imgs/Kitsune_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Dragon", img: "./assets/imgs/Dragon_Fruit.png", mestria_level: 0, permanent: false }
   ],
 
   info: {
     text_label: "Frutas coletadas:",
     maestria: true,
+    permanent: true,
   }
 };
 

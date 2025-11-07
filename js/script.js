@@ -1,6 +1,7 @@
 function renderItems(c_data_items) {
   const saved = JSON.parse(localStorage.getItem("collection") || "[]");
   const awaken_saved = JSON.parse(localStorage.getItem("awakened_fruits") || "[]");
+  const permanent_saved = JSON.parse(localStorage.getItem("permanent_fruits") || "[]");
   const mastery_saved = JSON.parse(localStorage.getItem("fruit_mastery") || "{}");
 
   let total = 0, checked = 0;
@@ -27,33 +28,38 @@ function renderItems(c_data_items) {
         checked++;
       }
 
-        console.log(c_data_items.info)
-
       // HTML do card
       card.innerHTML = `
         <img src="${item.img}" alt="${item.name}">
         <span class="fruit-name">${item.name}</span>
         <div class="fruit-extra">
-          ${
-            item.second_awakening
-              ? `<label class="awaken-label">
-                  <input type="checkbox" class="awaken-checkbox" ${awaken_saved.includes(item.name) ? "checked" : ""}>
-                  🌙 Segundo Despertar
-                 </label>`
-              : ""
+          ${item.second_awakening
+            ? `<label class="awaken-label">
+                <input type="checkbox" class="awaken-checkbox" ${awaken_saved.includes(item.name) ? "checked" : ""}>
+                🌙 Segundo Despertar
+               </label>`
+            : ""
           }
-            ${c_data_items.info.maestria 
-              ? `<label class="mastery-label">
-                  ⚔️ Mestria:
-                  <input type="number" min="0" max="600" class="mastery-input" value="${mastery_saved[item.name] || item.mestria_level || 0}">
-                </label>` 
-              : ""}
+
+          ${c_data_items.info.permanent 
+            ? `<label class="permanent-label">
+                <input type="checkbox" class="permanent-checkbox" ${permanent_saved.includes(item.name) ? "checked" : ""}>
+                  💎 Permanente
+              </label>` 
+            : ""}
+
+          ${c_data_items.info.maestria 
+            ? `<label class="mastery-label">
+                ⚔️ Mestria:
+                <input type="number" min="0" max="600" class="mastery-input" value="${mastery_saved[item.name] || item.mestria_level || 0}">
+              </label>` 
+            : ""}
         </div>
       `;
 
-      // clique principal: marcar fruta como coletada
+      // Clique principal: marcar fruta como coletada
       card.addEventListener("click", (e) => {
-        // evita que o clique em input/checkbox acione
+        // Evita que o clique nos inputs acione o toggle do card
         if (e.target.tagName === "INPUT" || e.target.tagName === "LABEL") return;
 
         if (item.invalid) return;
@@ -69,7 +75,7 @@ function renderItems(c_data_items) {
         updateCounter(c_data_items);
       });
 
-      // controle: segundo despertar
+      // Controle: segundo despertar
       const awakenBox = card.querySelector(".awaken-checkbox");
       if (awakenBox) {
         awakenBox.addEventListener("change", () => {
@@ -80,11 +86,27 @@ function renderItems(c_data_items) {
             awakenList = awakenList.filter((x) => x !== item.name);
           }
           localStorage.setItem("awakened_fruits", JSON.stringify(awakenList));
+          updateCounter(c_data_items);
         });
       }
 
-      // controle: mestria
-      if(c_data_items.info.maestria ) {
+      // Controle: fruta permanente
+      const permanentBox = card.querySelector(".permanent-checkbox");
+      if (permanentBox) {
+        permanentBox.addEventListener("change", () => {
+          let permanentList = JSON.parse(localStorage.getItem("permanent_fruits") || "[]");
+          if (permanentBox.checked) {
+            if (!permanentList.includes(item.name)) permanentList.push(item.name);
+          } else {
+            permanentList = permanentList.filter((x) => x !== item.name);
+          }
+          localStorage.setItem("permanent_fruits", JSON.stringify(permanentList));
+          updateCounter(c_data_items);
+        });
+      }
+
+      // Controle: mestria
+      if (c_data_items.info.maestria) {
         const masteryInput = card.querySelector(".mastery-input");
         masteryInput.addEventListener("input", () => {
           let mastery = JSON.parse(localStorage.getItem("fruit_mastery") || "{}");
@@ -105,6 +127,8 @@ function updateCounter(c_data_items, counts, total, checked) {
   if (!c_data_items) return;
 
   const saved = JSON.parse(localStorage.getItem("collection") || "[]");
+  const awaken_saved = JSON.parse(localStorage.getItem("awakened_fruits") || "[]");
+  const permanent_saved = JSON.parse(localStorage.getItem("permanent_fruits") || "[]");
   const rarities = ["common", "uncommon", "rare", "legendary", "mythical"];
 
   checked = 0;
@@ -119,20 +143,22 @@ function updateCounter(c_data_items, counts, total, checked) {
     checked += collected;
   });
 
-  const awaken_saved = JSON.parse(localStorage.getItem("awakened_fruits") || "[]");
-  const all_awakenables = rarities.flatMap(r => (c_data_items[r] || []).filter(x => x.second_awakening));
-  const awaken_total = all_awakenables.length;
-  const awaken_done = all_awakenables.filter(x => awaken_saved.includes(x.name)).length;
+  const awakenables = rarities.flatMap(r => (c_data_items[r] || []).filter(x => x.second_awakening));
+  const awaken_done = awakenables.filter(x => awaken_saved.includes(x.name)).length;
+
+  const permanent_total = rarities.flatMap(r => c_data_items[r] || []).length;
+  const permanent_done = permanent_saved.length;
 
   const c = document.getElementById("counter");
   c.innerHTML = `
-    <strong>${c_data_items.info.text_label}:</strong> ${checked}/${total}<br>
-    🟦 Comuns: ${counts.common.collected}/${counts.common.total} · 
-    🟩 Incomuns: ${counts.uncommon.collected}/${counts.uncommon.total} · 
-    🟪 Raros: ${counts.rare.collected}/${counts.rare.total} · 
-    🟨 Lendários: ${counts.legendary.collected}/${counts.legendary.total} · 
+    <strong>${c_data_items.info.text_label}</strong> ${checked}/${total}<br>
+    🟦 Comuns: ${counts.common.collected}/${counts.common.total} ·
+    🟩 Incomuns: ${counts.uncommon.collected}/${counts.uncommon.total} ·
+    🟪 Raros: ${counts.rare.collected}/${counts.rare.total} ·
+    🟨 Lendários: ${counts.legendary.collected}/${counts.legendary.total} ·
     🟥 Míticos: ${counts.mythical.collected}/${counts.mythical.total}
-    ${all_awakenables.length ? `<br>🌙 Segundos Despertares: ${awaken_done}/${awaken_total}` : ""}
+    ${awakenables.length ? `<br>🌙 Segundos Despertares: ${awaken_done}/${awakenables.length}` : ""}
+    <br>💎 Permanentes: ${permanent_done}/${permanent_total}
   `;
 }
 
@@ -414,7 +440,6 @@ function renderFishingRods(c_data_items) {
   updateRodsCounter(c_data_items, counts, total, collected);
 }
 
-// ====== CONTADOR ======
 function updateRodsCounter(c_data_items, counts, total, collected) {
   const saved = JSON.parse(localStorage.getItem("rods_collection") || "[]");
   const rarities = ["common", "uncommon", "rare", "legendary", "mythical"];
