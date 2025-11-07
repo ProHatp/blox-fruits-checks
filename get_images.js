@@ -2,8 +2,8 @@ import fs from "fs";
 import https from "https";
 import puppeteer from "puppeteer";
 
-const WIKI_URL = "https://blox-fruits.fandom.com/wiki/Blox_Fruits";
-const DIR = "./images";
+const WIKI_URL = "https://blox-fruits.fandom.com/wiki/Fish";
+const DIR = "./assets/imgs";
 
 function limparNome(url) {
   const match = url.match(/\/([^\/]+\.png)/i);

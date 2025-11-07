@@ -1,256 +1,261 @@
 const data_guns = {
   common: [
-    { name: "Slingshot", img: "./images/Slingshot.png" }
+    { name: "Slingshot", img: "../assets/imgs/Slingshot.png" }
   ],
 
   uncommon: [
-    { name: "Flintlock", img: "./images/Flintlock.png" },
-    { name: "Musket", img: "./images/Musket.png" }
+    { name: "Flintlock", img: "../assets/imgs/Flintlock.png" },
+    { name: "Musket", img: "../assets/imgs/Musket.png" }
   ],
 
   rare: [
-    { name: "Acidum Rifle", img: "./images/Acidum_Rifle.png" },
-    { name: "Bizarre Revolver", img: "./images/Bizarre_Revolver.png" },
-    { name: "Cannon", img: "./images/Cannon.png" },
-    { name: "Dual Flintlock", img: "./images/Dual_Flintlock.png" },
-    { name: "Magma Blaster", img: "./images/Magma_Blaster.png" },
-    { name: "Refined Slingshot", img: "./images/Refined_Slingshot.png" }
+    { name: "Acidum Rifle", img: "../assets/imgs/Acidum_Rifle.png" },
+    { name: "Bizarre Revolver", img: "../assets/imgs/Bizarre_Revolver.png" },
+    { name: "Cannon", img: "../assets/imgs/Cannon.png" },
+    { name: "Dual Flintlock", img: "../assets/imgs/Dual_Flintlock.png" },
+    { name: "Magma Blaster", img: "../assets/imgs/Magma_Blaster.png" },
+    { name: "Refined Slingshot", img: "../assets/imgs/Refined_Slingshot.png" }
   ],
 
   legendary: [
-    { name: "Bazooka", img: "./images/Bazooka.png" },
-    { name: "Dragonstorm", img: "./images/Dragonstorm.png" },
-    { name: "Kabucha", img: "./images/Kabucha.png" },
-    { name: "Venom Bow", img: "./images/Venom_Bow.png" }
+    { name: "Bazooka", img: "../assets/imgs/Bazooka.png" },
+    { name: "Dragonstorm", img: "../assets/imgs/Dragonstorm.png" },
+    { name: "Kabucha", img: "../assets/imgs/Kabucha.png" },
+    { name: "Venom Bow", img: "../assets/imgs/Venom_Bow.png" }
   ],
 
   mythical: [
-    { name: "Skull Guitar", img: "./images/Skull_Guitar.png" }
+    { name: "Skull Guitar", img: "../assets/imgs/Skull_Guitar.png" }
   ],
 
   info: {
-    text_label: "Armas coletadas:"
+    text_label: "Armas coletadas:",
+    maestria: true,
   }
 };
 
 const data_items = {
   common: [
-    { name: "Headband (Blue)", img: "./images/Headband_(Blue).png" },
-    { name: "Headband (Green)", img: "./images/Headband_(Green).png" },
-    { name: "Headband (Orange)", img: "./images/Headband_(Orange).png" },
-    { name: "Headband (Purple)", img: "./images/Headband_(Purple).png" },
-    { name: "Headband (Red)", img: "./images/Headband_(Red).png" },
-    { name: "Headband (White)", img: "./images/Headband_(White).png" },
-    { name: "Headband (Yellow)", img: "./images/Headband_(Yellow).png" }
+    { name: "Headband (Blue)", img: "../assets/imgs/Headband_(Blue).png" },
+    { name: "Headband (Green)", img: "../assets/imgs/Headband_(Green).png" },
+    { name: "Headband (Orange)", img: "../assets/imgs/Headband_(Orange).png" },
+    { name: "Headband (Purple)", img: "../assets/imgs/Headband_(Purple).png" },
+    { name: "Headband (Red)", img: "../assets/imgs/Headband_(Red).png" },
+    { name: "Headband (White)", img: "../assets/imgs/Headband_(White).png" },
+    { name: "Headband (Yellow)", img: "../assets/imgs/Headband_(Yellow).png" }
   ],
 
   uncommon: [
-    { name: "Dojo Belt (Blue)", img: "./images/Dojo_Belt_(Blue).png" },
-    { name: "Dojo Belt (Green)", img: "./images/Dojo_Belt_(Green).png" },
-    { name: "Dojo Belt (Orange)", img: "./images/Dojo_Belt_(Orange).png" },
-    { name: "Dojo Belt (Purple)", img: "./images/Dojo_Belt_(Purple).png" },
-    { name: "Dojo Belt (Red)", img: "./images/Dojo_Belt_(Red).png" },
-    { name: "Dojo Belt (White)", img: "./images/Dojo_Belt_(White).png" },
-    { name: "Dojo Belt (Yellow)", img: "./images/Dojo_Belt_(Yellow).png" },
-    { name: "Headband (Black)", img: "./images/Headband_(Black).png" },
-    { name: "Pink Coat", img: "./images/Pink_Coat.png" },
+    { name: "Dojo Belt (Blue)", img: "../assets/imgs/Dojo_Belt_(Blue).png" },
+    { name: "Dojo Belt (Green)", img: "../assets/imgs/Dojo_Belt_(Green).png" },
+    { name: "Dojo Belt (Orange)", img: "../assets/imgs/Dojo_Belt_(Orange).png" },
+    { name: "Dojo Belt (Purple)", img: "../assets/imgs/Dojo_Belt_(Purple).png" },
+    { name: "Dojo Belt (Red)", img: "../assets/imgs/Dojo_Belt_(Red).png" },
+    { name: "Dojo Belt (White)", img: "../assets/imgs/Dojo_Belt_(White).png" },
+    { name: "Dojo Belt (Yellow)", img: "../assets/imgs/Dojo_Belt_(Yellow).png" },
+    { name: "Headband (Black)", img: "../assets/imgs/Headband_(Black).png" },
+    { name: "Pink Coat", img: "../assets/imgs/Pink_Coat.png" },
   ],
 
   rare: [
-    { name: "Bandanna (Black)", img: "./images/Bandanna_(Black).png" },
-    { name: "Bandanna (Green)", img: "./images/Bandanna_(Green).png" },
-    { name: "Bandanna (Red)", img: "./images/Bandanna_(Red).png" },
-    { name: "Bear Ears", img: "./images/Bear_Ears.png" },
-    { name: "Black Cape", img: "./images/Black_Cape.png" },
-    { name: "Black Spikey Coat", img: "./images/Black_Spikey_Coat.png" },
-    { name: "Blue Spikey Coat", img: "./images/Blue_Spikey_Coat.png" },
-    { name: "Red Spikey Coat", img: "./images/Red_Spikey_Coat.png" },
-    { name: "Choppa", img: "./images/Choppa.png" },
-    { name: "Coat (Marine)", img: "./images/Coat_(Marine).png" },
-    { name: "Cool Shades", img: "./images/Cool_Shades.png" },
-    { name: "Elf Hat", img: "./images/Elf_Hat.png" },
-    { name: "Ghoul Mask", img: "./images/Ghoul_Mask.png" },
-    { name: "Golden Sunhat", img: "./images/Golden_Sunhat.png" },
-    { name: "Hunter Cape (Black)", img: "./images/Hunter_Cape_(Black).png" },
-    { name: "Hunter Cape (Green)", img: "./images/Hunter_Cape_(Green).png" },
-    { name: "Hunter Cape (Red)", img: "./images/Hunter_Cape_(Red).png" },
-    { name: "Jaw Shield", img: "./images/Jaw_Shield.png" },
-    { name: "Lei", img: "./images/Lei.png" },
-    { name: "Marine Cap", img: "./images/Marine_Cap.png" },
-    { name: "Pilot Helmet", img: "./images/Pilot_Helmet.png" },
-    { name: "Pretty Helmet", img: "./images/Pretty_Helmet.png" },
-    { name: "Santa Hat", img: "./images/Santa_Hat.png" },
-    { name: "Shark Tooth Necklace", img: "./images/Shark_Tooth_Necklace.png" },
-    { name: "Swordsman Hat", img: "./images/Swordsman_Hat.png" },
-    { name: "T-Rex Skull", img: "./images/T-Rex_Skull.png" },
-    { name: "Tomoe Ring", img: "./images/Tomoe_Ring.png" },
-    { name: "Top Hat", img: "./images/Top_Hat.png" },
-    { name: "Usoap’s Hat", img: "./images/Usoap's_Hat.png" },
-    { name: "Warrior Helmet", img: "./images/Warrior_Helmet.png" },
-    { name: "Dojo Belt (Black)", img: "./images/Dojo_Belt_(Black).png" },
+    { name: "Bandanna (Black)", img: "../assets/imgs/Bandanna_(Black).png" },
+    { name: "Bandanna (Green)", img: "../assets/imgs/Bandanna_(Green).png" },
+    { name: "Bandanna (Red)", img: "../assets/imgs/Bandanna_(Red).png" },
+    { name: "Bear Ears", img: "../assets/imgs/Bear_Ears.png" },
+    { name: "Black Cape", img: "../assets/imgs/Black_Cape.png" },
+    { name: "Black Spikey Coat", img: "../assets/imgs/Black_Spikey_Coat.png" },
+    { name: "Blue Spikey Coat", img: "../assets/imgs/Blue_Spikey_Coat.png" },
+    { name: "Red Spikey Coat", img: "../assets/imgs/Red_Spikey_Coat.png" },
+    { name: "Choppa", img: "../assets/imgs/Choppa.png" },
+    { name: "Coat (Marine)", img: "../assets/imgs/Coat_(Marine).png" },
+    { name: "Cool Shades", img: "../assets/imgs/Cool_Shades.png" },
+    { name: "Elf Hat", img: "../assets/imgs/Elf_Hat.png" },
+    { name: "Ghoul Mask", img: "../assets/imgs/Ghoul_Mask.png" },
+    { name: "Golden Sunhat", img: "../assets/imgs/Golden_Sunhat.png" },
+    { name: "Hunter Cape (Black)", img: "../assets/imgs/Hunter_Cape_(Black).png" },
+    { name: "Hunter Cape (Green)", img: "../assets/imgs/Hunter_Cape_(Green).png" },
+    { name: "Hunter Cape (Red)", img: "../assets/imgs/Hunter_Cape_(Red).png" },
+    { name: "Jaw Shield", img: "../assets/imgs/Jaw_Shield.png" },
+    { name: "Lei", img: "../assets/imgs/Lei.png" },
+    { name: "Marine Cap", img: "../assets/imgs/Marine_Cap.png" },
+    { name: "Pilot Helmet", img: "../assets/imgs/Pilot_Helmet.png" },
+    { name: "Pretty Helmet", img: "../assets/imgs/Pretty_Helmet.png" },
+    { name: "Santa Hat", img: "../assets/imgs/Santa_Hat.png" },
+    { name: "Shark Tooth Necklace", img: "../assets/imgs/Shark_Tooth_Necklace.png" },
+    { name: "Swordsman Hat", img: "../assets/imgs/Swordsman_Hat.png" },
+    { name: "T-Rex Skull", img: "../assets/imgs/T-Rex_Skull.png" },
+    { name: "Tomoe Ring", img: "../assets/imgs/Tomoe_Ring.png" },
+    { name: "Top Hat", img: "../assets/imgs/Top_Hat.png" },
+    { name: "Usoap’s Hat", img: "../assets/imgs/Usoap's_Hat.png" },
+    { name: "Warrior Helmet", img: "../assets/imgs/Warrior_Helmet.png" },
+    { name: "Dojo Belt (Black)", img: "../assets/imgs/Dojo_Belt_(Black).png" },
   ],
 
   legendary: [
-    { name: "Holy Crown", img: "./images/Holy_Crown.png" },
-    { name: "D.S. Coat", img: "./images/D.S._Coat.png", invalid: true },
-    { name: "Cupid’s Coat", img: "./images/Cupid's_Coat.png" },
-    { name: "Feathered Visage", img: "./images/Feathered_Visage.png" },
-    { name: "Heart Shades", img: "./images/Heart_Shades.png" },
-    { name: "Kitsune Mask", img: "./images/Kitsune_Mask.png" },
-    { name: "Kitsune Ribbon", img: "./images/Kitsune_Ribbon.png" },
-    { name: "Musketeer Hat", img: "./images/Musketeer_Hat.png" },
-    { name: "Pale Scarf", img: "./images/Pale_Scarf.png" },
-    { name: "Swan Glasses", img: "./images/Swan_Glasses.png" },
-    { name: "Terror Jaw", img: "./images/Terror_Jaw.png" },
-    { name: "Valkyrie Helm", img: "./images/Valkyrie_Helm.png" },
-    { name: "Wyvern Helmet", img: "./images/Wyvern_Helmet.png", invalid: true },
-    { name: "Zebra Cap", img: "./images/Zebra_Cap.png" },
-    { name: "Dino Hood", img: "./images/Dino_Hood.png" },
+    { name: "Holy Crown", img: "../assets/imgs/Holy_Crown.png" },
+    { name: "D.S. Coat", img: "../assets/imgs/D.S._Coat.png", invalid: true },
+    { name: "Cupid’s Coat", img: "../assets/imgs/Cupid's_Coat.png" },
+    { name: "Feathered Visage", img: "../assets/imgs/Feathered_Visage.png" },
+    { name: "Heart Shades", img: "../assets/imgs/Heart_Shades.png" },
+    { name: "Kitsune Mask", img: "../assets/imgs/Kitsune_Mask.png" },
+    { name: "Kitsune Ribbon", img: "../assets/imgs/Kitsune_Ribbon.png" },
+    { name: "Musketeer Hat", img: "../assets/imgs/Musketeer_Hat.png" },
+    { name: "Pale Scarf", img: "../assets/imgs/Pale_Scarf.png" },
+    { name: "Swan Glasses", img: "../assets/imgs/Swan_Glasses.png" },
+    { name: "Terror Jaw", img: "../assets/imgs/Terror_Jaw.png" },
+    { name: "Valkyrie Helm", img: "../assets/imgs/Valkyrie_Helm.png" },
+    { name: "Wyvern Helmet", img: "../assets/imgs/Wyvern_Helmet.png", invalid: true },
+    { name: "Zebra Cap", img: "../assets/imgs/Zebra_Cap.png" },
+    { name: "Dino Hood", img: "../assets/imgs/Dino_Hood.png" },
   ],
 
   mythical: [
-    { name: "Party Hat", img: "./images/Party_Hat.png" },
-    { name: "Divine Cloak", img: "./images/Divine_Cloak.png" },
-    { name: "Sanguine Cloak", img: "./images/Sanguine_Cloak.png" },
-    { name: "Leviathan Shield", img: "./images/Leviathan_Shield.png" },
-    { name: "Uzoth’s Cloak", img: "./images/Uzoth's_Cloak.png" },
-    { name: "Oni Helmet", img: "./images/Oni_Helmet.png" },
-    { name: "Leviathan Crown", img: "./images/Leviathan_Crown.png" },
-    { name: "Dragon Mantle", img: "./images/Dragon_Mantle.png" },
-    { name: "Holiday Cloak", img: "./images/Holiday_Cloak.png" },
-    { name: "50B Party Hat", img: "./images/50b_Party_Hat.png" },
-    { name: "Dark Coat", img: "./images/Dark_Coat.png" },
-    { name: "Celestial Helmet", img: "./images/Celestial_Helmet.png" },
-    { name: "Coven Witch Hat", img: "./images/Coven_Witch_Hat.webp" },
-    { name: "Pumpkin Mask", img: "./images/Pumpkin_Mask.webp" },
+    { name: "Party Hat", img: "../assets/imgs/Party_Hat.png" },
+    { name: "Divine Cloak", img: "../assets/imgs/Divine_Cloak.png" },
+    { name: "Sanguine Cloak", img: "../assets/imgs/Sanguine_Cloak.png" },
+    { name: "Leviathan Shield", img: "../assets/imgs/Leviathan_Shield.png" },
+    { name: "Uzoth’s Cloak", img: "../assets/imgs/Uzoth's_Cloak.png" },
+    { name: "Oni Helmet", img: "../assets/imgs/Oni_Helmet.png" },
+    { name: "Leviathan Crown", img: "../assets/imgs/Leviathan_Crown.png" },
+    { name: "Dragon Mantle", img: "../assets/imgs/Dragon_Mantle.png" },
+    { name: "Holiday Cloak", img: "../assets/imgs/Holiday_Cloak.png" },
+    { name: "50B Party Hat", img: "../assets/imgs/50b_Party_Hat.png" },
+    { name: "Dark Coat", img: "../assets/imgs/Dark_Coat.png" },
+    { name: "Celestial Helmet", img: "../assets/imgs/Celestial_Helmet.png" },
+    { name: "Coven Witch Hat", img: "../assets/imgs/Coven_Witch_Hat.webp" },
+    { name: "Pumpkin Mask", img: "../assets/imgs/Pumpkin_Mask.webp" },
   ],
 
   info: {
-    text_label: "Itens coletados:"
+    text_label: "Itens coletados:",
+    maestria: false,
   }
 };
 
 const data_swords = {
   common: [
-    { name: "Cutlass", img: "./images/Cutlass.png" },
-    { name: "Dual Katana", img: "./images/Dual_Katana.png" },
-    { name: "Katana", img: "./images/Katana.png" }
+    { name: "Cutlass", img: "../assets/imgs/Cutlass.png" },
+    { name: "Dual Katana", img: "../assets/imgs/Dual_Katana.png" },
+    { name: "Katana", img: "../assets/imgs/Katana.png" }
   ],
 
   uncommon: [
-    { name: "Fishing Trophy", img: "./images/Fishing_Trophy.png" },
-    { name: "Iron Mace", img: "./images/Iron_Mace.png" },
-    { name: "Shark Saw", img: "./images/Shark_Saw.png" },
-    { name: "Triple Katana", img: "./images/Triple_Katana.png" },
-    { name: "Twin Hooks", img: "./images/Twin_Hooks.png" }
+    { name: "Fishing Trophy", img: "../assets/imgs/Fishing_Trophy.png" },
+    { name: "Iron Mace", img: "../assets/imgs/Iron_Mace.png" },
+    { name: "Shark Saw", img: "../assets/imgs/Shark_Saw.png" },
+    { name: "Triple Katana", img: "../assets/imgs/Triple_Katana.png" },
+    { name: "Twin Hooks", img: "../assets/imgs/Twin_Hooks.png" }
   ],
 
   rare: [
-    { name: "Dragon Trident", img: "./images/Dragon_Trident.png" },
-    { name: "Dual-Headed Blade", img: "./images/Dual-Headed_Blade.png" },
-    { name: "Flail", img: "./images/Flail.png" },
-    { name: "Gravity Blade", img: "./images/Gravity_Blade.png" },
-    { name: "Longsword", img: "./images/Longsword.png" },
-    { name: "Pipe", img: "./images/Pipe.png" },
-    { name: "Soul Cane", img: "./images/Soul_Cane.png" },
-    { name: "Trident", img: "./images/Trident.png" },
-    { name: "Wardens Sword", img: "./images/Wardens_Sword.png" }
+    { name: "Dragon Trident", img: "../assets/imgs/Dragon_Trident.png" },
+    { name: "Dual-Headed Blade", img: "../assets/imgs/Dual-Headed_Blade.png" },
+    { name: "Flail", img: "../assets/imgs/Flail.png" },
+    { name: "Gravity Blade", img: "../assets/imgs/Gravity_Blade.png" },
+    { name: "Longsword", img: "../assets/imgs/Longsword.png" },
+    { name: "Pipe", img: "../assets/imgs/Pipe.png" },
+    { name: "Soul Cane", img: "../assets/imgs/Soul_Cane.png" },
+    { name: "Trident", img: "../assets/imgs/Trident.png" },
+    { name: "Wardens Sword", img: "../assets/imgs/Wardens_Sword.png" }
   ],
 
   legendary: [
-    { name: "Bisento", img: "./images/Bisento.png" },
-    { name: "Buddy Sword", img: "./images/Buddy_Sword.png" },
-    { name: "Canvander", img: "./images/Canvander.png" },
-    { name: "Dark Dagger", img: "./images/Dark_Dagger.png" },
-    { name: "Dragonheart", img: "./images/Dragonheart.png" },
-    { name: "Fox Lamp", img: "./images/Fox_Lamp.png" },
-    { name: "Koko", img: "./images/Koko.png" },
-    { name: "Midnight Blade", img: "./images/Midnight_Blade.png" },
-    { name: "Oroshi", img: "./images/Oroshi.png" },
-    { name: "Pole (1st Form)", img: "./images/Pole_(1st_Form).png" },
-    { name: "Pole (2nd Form)", img: "./images/Pole_(2nd_Form).png" },
-    { name: "Rengoku", img: "./images/Rengoku.png" },
-    { name: "Saber", img: "./images/Saber.png" },
-    { name: "Saishi", img: "./images/Saishi.png" },
-    { name: "Shark Anchor", img: "./images/Shark_Anchor.png" },
-    { name: "Shizu", img: "./images/Shizu.png" },
-    { name: "Spikey Trident", img: "./images/Spikey_Trident.png" },
-    { name: "Tushita", img: "./images/Tushita.png" },
-    { name: "Yama", img: "./images/Yama.png" }
+    { name: "Bisento", img: "../assets/imgs/Bisento.png" },
+    { name: "Buddy Sword", img: "../assets/imgs/Buddy_Sword.png" },
+    { name: "Canvander", img: "../assets/imgs/Canvander.png" },
+    { name: "Dark Dagger", img: "../assets/imgs/Dark_Dagger.png" },
+    { name: "Dragonheart", img: "../assets/imgs/Dragonheart.png" },
+    { name: "Fox Lamp", img: "../assets/imgs/Fox_Lamp.png" },
+    { name: "Koko", img: "../assets/imgs/Koko.png" },
+    { name: "Midnight Blade", img: "../assets/imgs/Midnight_Blade.png" },
+    { name: "Oroshi", img: "../assets/imgs/Oroshi.png" },
+    { name: "Pole (1st Form)", img: "../assets/imgs/Pole_(1st_Form).png" },
+    { name: "Pole (2nd Form)", img: "../assets/imgs/Pole_(2nd_Form).png" },
+    { name: "Rengoku", img: "../assets/imgs/Rengoku.png" },
+    { name: "Saber", img: "../assets/imgs/Saber.png" },
+    { name: "Saishi", img: "../assets/imgs/Saishi.png" },
+    { name: "Shark Anchor", img: "../assets/imgs/Shark_Anchor.png" },
+    { name: "Shizu", img: "../assets/imgs/Shizu.png" },
+    { name: "Spikey Trident", img: "../assets/imgs/Spikey_Trident.png" },
+    { name: "Tushita", img: "../assets/imgs/Tushita.png" },
+    { name: "Yama", img: "../assets/imgs/Yama.png" }
   ],
 
   mythical: [
-    { name: "Cursed Dual Katana", img: "./images/Cursed_Dual_Katana.png" },
-    { name: "Dark Blade", img: "./images/Dark_Blade.png" },
-    { name: "Hallow Scythe", img: "./images/Hallow_Scythe.png" },
-    { name: "Triple Dark Blade", img: "./images/Triple_Dark_Blade.png" },
-    { name: "True Triple Katana", img: "./images/True_Triple_Katana.png" }
+    { name: "Cursed Dual Katana", img: "../assets/imgs/Cursed_Dual_Katana.png" },
+    { name: "Dark Blade", img: "../assets/imgs/Dark_Blade.png" },
+    { name: "Hallow Scythe", img: "../assets/imgs/Hallow_Scythe.png" },
+    { name: "Triple Dark Blade", img: "../assets/imgs/Triple_Dark_Blade.png" },
+    { name: "True Triple Katana", img: "../assets/imgs/True_Triple_Katana.png" }
   ],
 
   info: {
-    text_label: "Espadas coletadas:"
+    text_label: "Espadas coletadas:",
+    maestria: true,
   }
 };
 
 const data_fruits = {
   common: [
-    { name: "Rocket", img: "./images/Rocket_Fruit.png" },
-    { name: "Spin", img: "./images/Spin_Fruit.png" },
-    { name: "Blade", img: "./images/Blade_Fruit.png" },
-    { name: "Spring", img: "./images/Spring_Fruit.png" },
-    { name: "Bomb", img: "./images/Bomb_Fruit.png" },
-    { name: "Smoke", img: "./images/Smoke_Fruit.png" },
-    { name: "Spike", img: "./images/Spike_Fruit.png" }
+    { name: "Rocket", img: "../assets/imgs/Rocket_Fruit.png", mestria_level: 0 },
+    { name: "Spin", img: "../assets/imgs/Spin_Fruit.png", mestria_level: 0 },
+    { name: "Blade", img: "../assets/imgs/Blade_Fruit.png", mestria_level: 0 },
+    { name: "Spring", img: "../assets/imgs/Spring_Fruit.png", mestria_level: 0 },
+    { name: "Bomb", img: "../assets/imgs/Bomb_Fruit.png", mestria_level: 0 },
+    { name: "Smoke", img: "../assets/imgs/Smoke_Fruit.png", mestria_level: 0 },
+    { name: "Spike", img: "../assets/imgs/Spike_Fruit.png", mestria_level: 0 }
   ],
 
   uncommon: [
-    { name: "Flame", img: "./images/Flame_Fruit.png" },
-    { name: "Ice", img: "./images/Ice_Fruit.png" },
-    { name: "Sand", img: "./images/Sand_Fruit.png" },
-    { name: "Dark", img: "./images/Dark_Fruit.png" },
-    { name: "Eagle", img: "./images/Eagle_Fruit.png" },
-    { name: "Diamond", img: "./images/Diamond_Fruit.png" }
+    { name: "Flame", img: "../assets/imgs/Flame_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Ice", img: "../assets/imgs/Ice_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Sand", img: "../assets/imgs/Sand_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Dark", img: "../assets/imgs/Dark_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Eagle", img: "../assets/imgs/Eagle_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Diamond", img: "../assets/imgs/Diamond_Fruit.png", mestria_level: 0 }
   ],
 
   rare: [
-    { name: "Light", img: "./images/Light_Fruit.png" },
-    { name: "Rubber", img: "./images/Rubber_Fruit.png" },
-    { name: "Ghost", img: "./images/Ghost_Fruit.png" },
-    { name: "Magma", img: "./images/Magma_Fruit.png" }
+    { name: "Light", img: "../assets/imgs/Light_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Rubber", img: "../assets/imgs/Rubber_Fruit.png", mestria_level: 0 },
+    { name: "Ghost", img: "../assets/imgs/Ghost_Fruit.png", mestria_level: 0 },
+    { name: "Magma", img: "../assets/imgs/Magma_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 }
   ],
 
   legendary: [
-    { name: "Quake", img: "./images/Quake_Fruit.png" },
-    { name: "Buddha", img: "./images/Buddha_Fruit.png" },
-    { name: "Love", img: "./images/Love_Fruit.png" },
-    { name: "Creation", img: "./images/Creation_Fruit.png" },
-    { name: "Spider", img: "./images/Spider_Fruit.png" },
-    { name: "Sound", img: "./images/Sound_Fruit.png" },
-    { name: "Phoenix", img: "./images/Phoenix_Fruit.png" },
-    { name: "Portal", img: "./images/Portal_Fruit.png" },
-    { name: "Lightning", img: "./images/Lightning_Fruit.png" },
-    { name: "Pain", img: "./images/Pain_Fruit.png" },
-    { name: "Blizzard", img: "./images/Blizzard_Fruit.png" }
+    { name: "Quake", img: "../assets/imgs/Quake_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Buddha", img: "../assets/imgs/Buddha_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Love", img: "../assets/imgs/Love_Fruit.png", mestria_level: 0 },
+    { name: "Creation", img: "../assets/imgs/Creation_Fruit.png", mestria_level: 0 },
+    { name: "Spider", img: "../assets/imgs/Spider_Fruit.png", mestria_level: 0 },
+    { name: "Sound", img: "../assets/imgs/Sound_Fruit.png", mestria_level: 0 },
+    { name: "Phoenix", img: "../assets/imgs/Phoenix_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Portal", img: "../assets/imgs/Portal_Fruit.png", mestria_level: 0 },
+
+    { name: "Lightning", img: "../assets/imgs/Lightning_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Pain", img: "../assets/imgs/Pain_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Blizzard", img: "../assets/imgs/Blizzard_Fruit.png" }
   ],
 
   mythical: [
-    { name: "Gravity", img: "./images/Gravity_Fruit.png" },
-    { name: "Mammoth", img: "./images/Mammoth_Fruit.png" },
-    { name: "T-Rex", img: "./images/T-Rex_Fruit.png" },
-    { name: "Dough", img: "./images/Dough_Fruit.png" },
-    { name: "Shadow", img: "./images/Shadow_Fruit.png" },
-    { name: "Venom", img: "./images/Venom_Fruit.png" },
-    { name: "Control", img: "./images/Control_Fruit.png" },
-    { name: "Gas", img: "./images/Gas_Fruit.png" },
-    { name: "Spirit", img: "./images/Spirit_Fruit.png" },
-    { name: "Leopard", img: "./images/Leopard_Fruit.png" },
-    { name: "Yeti", img: "./images/Yeti_Fruit.png" },
-    { name: "Kitsune", img: "./images/Kitsune_Fruit.png" },
-    { name: "Dragon", img: "./images/Dragon_Fruit.png" }
+    { name: "Gravity", img: "../assets/imgs/Gravity_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Mammoth", img: "../assets/imgs/Mammoth_Fruit.png", mestria_level: 0 },
+    { name: "T-Rex", img: "../assets/imgs/T-Rex_Fruit.png", mestria_level: 0 },
+    { name: "Dough", img: "../assets/imgs/Dough_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0 },
+    { name: "Shadow", img: "../assets/imgs/Shadow_Fruit.png", mestria_level: 0 },
+    { name: "Venom", img: "../assets/imgs/Venom_Fruit.png", mestria_level: 0 },
+    { name: "Control", img: "../assets/imgs/Control_Fruit.png", mestria_level: 0 },
+    { name: "Gas", img: "../assets/imgs/Gas_Fruit.png", mestria_level: 0 },
+    { name: "Spirit", img: "../assets/imgs/Spirit_Fruit.png", mestria_level: 0 },
+    { name: "Leopard", img: "../assets/imgs/Leopard_Fruit.png", mestria_level: 0 },
+    { name: "Yeti", img: "../assets/imgs/Yeti_Fruit.png", mestria_level: 0 },
+    { name: "Kitsune", img: "../assets/imgs/Kitsune_Fruit.png", mestria_level: 0 },
+    { name: "Dragon", img: "../assets/imgs/Dragon_Fruit.png", mestria_level: 0 }
   ],
 
   info: {
-    text_label: "Frutas coletadas:"
+    text_label: "Frutas coletadas:",
+    maestria: true,
   }
 };
 
@@ -1067,4 +1072,85 @@ const data_titles = {
         "title": "?????????",
         "obtainment": "?????????????"
     },
+};
+
+const data_fish_local = {
+    common: [
+        { name: "Catfish", img: "../assets/imgs/Catfish.png", details: { location: "Any", bait: "Any", min: "3kg", max: "37kg" } },
+        { name: "Carp", img: "../assets/imgs/Carp.png", details: { location: "Any", bait: "Any", min: "2kg", max: "19kg" } },
+        { name: "Redfin", img: "../assets/imgs/Redfin.png", details: { location: "Any", bait: "Any", min: "4kg", max: "30kg" } },
+        { name: "Tidegill", img: "../assets/imgs/Tidegill.png", details: { location: "Any", bait: "Any", min: "3kg", max: "27kg" } },
+        { name: "Saltwater Salmon", img: "../assets/imgs/Saltwater_Salmon.png", details: { location: "Any", bait: "Any", min: "5kg", max: "40kg" } },
+        { name: "Goldfish", img: "../assets/imgs/Goldfish.png", details: { location: "Any", bait: "Any", min: "2kg", max: "20kg" } },
+        { name: "Sea Sturgeon", img: "../assets/imgs/Sea_Sturgeon.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
+        { name: "Grouper", img: "../assets/imgs/Grouper.png", details: { location: "Any", bait: "Any", min: "5kg", max: "44kg" } },
+        { name: "Mossback", img: "../assets/imgs/Mossback.png", details: { location: "Any", bait: "Any", min: "5kg", max: "38kg" } },
+        { name: "Sand Bass", img: "../assets/imgs/Sand_Bass.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
+        { name: "Tuna", img: "../assets/imgs/Tuna.png", details: { location: "Any", bait: "Any", min: "5kg", max: "40kg" } },
+        { name: "Crab", img: "../assets/imgs/Crab.png", details: { location: "Any", bait: "Any", min: "5kg", max: "34kg" } },
+        { name: "Golden Carp", img: "../assets/imgs/Golden_Carp.png", details: { location: "Unobtainable", bait: "Any", min: "1kg", max: "???" } },
+        { name: "Starfish (Yellow)", img: "../assets/imgs/Starfish_(Yellow).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
+        { name: "Starfish (Purple)", img: "../assets/imgs/Starfish_(Purple).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
+        { name: "Starfish (Blue)", img: "../assets/imgs/Starfish_(Blue).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
+        { name: "Starfish (Green)", img: "../assets/imgs/Starfish_(Green).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
+        { name: "Starfish (Pink)", img: "../assets/imgs/Starfish_(Pink).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
+        { name: "Starfish (Red)", img: "../assets/imgs/Starfish_(Red).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } }
+    ],
+
+    uncommon: [
+        { name: "Angelfish", img: "../assets/imgs/Angelfish.png", details: { location: "Any", bait: "Any", min: "6kg", max: "46kg" } },
+        { name: "Flatfish", img: "../assets/imgs/Flatfish.png", details: { location: "Any", bait: "Any", min: "7kg", max: "50kg" } },
+        { name: "Clownfish", img: "../assets/imgs/Clownfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
+        { name: "Amber Trout", img: "../assets/imgs/Amber_Trout.png", details: { location: "Any", bait: "Any", min: "6kg", max: "44kg" } },
+        { name: "Bullfish", img: "../assets/imgs/Bullfish.png", details: { location: "Desert, Forgotten Island, Prehistoric Island", bait: "Any (Easier with Carnivore Bait)", min: "4kg", max: "33kg" } },
+        { name: "Parrotfish", img: "../assets/imgs/Parrotfish.png", details: { location: "Green Zone, Tiki Outpost", bait: "Any (Easier with Kelp Bait)", min: "7kg", max: "48kg" } },
+        { name: "Pufferfish", img: "../assets/imgs/Pufferfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "38kg" } },
+        { name: "Barracuda", img: "../assets/imgs/Barracuda.png", details: { location: "Underwater City", bait: "Any", min: "5kg", max: "35kg" } },
+        { name: "Kelp Bass", img: "../assets/imgs/Kelp_Bass.png", details: { location: "Any", bait: "Any (Easier with Kelp Bait)", min: "5kg", max: "35kg" } },
+        { name: "Colossal Shrimp", img: "../assets/imgs/Colossal_Shrimp.png", details: { location: "Any", bait: "Any", min: "6kg", max: "43kg" } },
+        { name: "Turtle", img: "../assets/imgs/Turtle.png", details: { location: "Whirlpool", bait: "Any", min: "3kg", max: "48kg" } },
+        { name: "Jester Clownfish", img: "../assets/imgs/Jester_Clownfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
+        { name: "Zombie Bass", img: "../assets/imgs/Zombie_Bass.png", details: { location: "Any", bait: "Any (Easier with Carnivore Bait)", min: "5kg", max: "35kg" } },
+        { name: "Soggy Boot", img: "../assets/imgs/Soggy_Boot.png", details: { location: "Any", bait: "Any", min: "N/A", max: "N/A" } }
+    ],
+
+    rare: [
+        { name: "Candyfish", img: "../assets/imgs/Candyfish.png", details: { location: "Sea of Treats", bait: "Any", min: "6kg", max: "47kg" } },
+        { name: "Ghostfish", img: "../assets/imgs/Ghostfish.png", details: { location: "Cursed Ship, Haunted Castle, Haunted Shipwreck, Mirage Island", bait: "Abyssal Bait, Epic Bait", min: "6kg", max: "41kg" } },
+        { name: "Leafy Trout", img: "../assets/imgs/Leafy_Trout.png", details: { location: "Green Zone, Floating Turtle, Great Tree", bait: "Any (Easier with Kelp Bait and Shark Rod)", min: "6kg", max: "42kg" } },
+        { name: "Molten Trout", img: "../assets/imgs/Molten_Trout.png", details: { location: "Magma Village, Prehistoric Island", bait: "Any (Easier with Carnivore Bait)", min: "5kg", max: "39kg" } },
+        { name: "Gliderfish", img: "../assets/imgs/Gliderfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "36kg" } },
+        { name: "Seahorse", img: "../assets/imgs/Seahorse.png", details: { location: "Any", bait: "Any", min: "7kg", max: "48kg" } },
+        { name: "Swamp Lurker", img: "../assets/imgs/Swamp_Lurker.png", details: { location: "Whirlpool", bait: "Any", min: "76kg", max: "210kg" } },
+        { name: "Lumo Whale", img: "../assets/imgs/Lumo_Whale.png", details: { location: "Whirlpool", bait: "Any", min: "110kg", max: "376kg" } },
+        { name: "Deepsea Octopus", img: "../assets/imgs/Deepsea_Octopus.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "???" } },
+        { name: "Jack-O-Fish", img: "../assets/imgs/JackOFish.png", details: { location: "Any", bait: "Any (Easier with Abyssal Bait)", min: "6kg", max: "41kg" } }
+    ],
+
+    legendary: [
+        { name: "Frostjaw", img: "../assets/imgs/Frostjaw.png", details: { location: "Frozen Village, Snow Mountain, Frozen Dimension", bait: "Any (Easier with Frozen Bait)", min: "25kg", max: "172kg" } },
+        { name: "Azure Marlin", img: "../assets/imgs/Azure_Marlin.png", details: { location: "Hydra Island, Kitsune Island", bait: "Any (Easier with Epic Bait)", min: "72kg", max: "483kg" } },
+        { name: "Deepglow Oarfish", img: "../assets/imgs/Deepglow_Oarfish.png", details: { location: "Cursed Ship (Glitched Out)", bait: "Abyssal Bait", min: "18kg", max: "121kg" } },
+        { name: "Angler (Fish)", img: "../assets/imgs/Angler_(Fish).png", details: { location: "Cursed Ship, Haunted Castle", bait: "Abyssal Bait", min: "4kg", max: "32kg" } },
+        { name: "Rock Dweller", img: "../assets/imgs/Rock_Dweller.png", details: { location: "Magma Village, Prehistoric Island", bait: "Any (Easier with Epic Bait)", min: "21kg", max: "145kg" } },
+        { name: "Deepsea Squid", img: "../assets/imgs/Deepsea_Squid.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "33.44kg" } },
+        { name: "Vampire Squid", img: "../assets/imgs/Vampire_Squid_(Held).png", details: { location: "???", bait: "???", min: "???", max: "???" } }
+    ],
+
+    mythical: [
+        { name: "Gravelhead Shark", img: "../assets/imgs/Gravelhead_Shark.png", details: { location: "Prehistoric Island", bait: "Carnivore Bait", min: "148kg", max: "989kg" } },
+        { name: "Terrorfish", img: "../assets/imgs/Terrorfish.png", details: { location: "Prehistoric Island, Tiki Outpost, Frozen Dimension", bait: "Carnivore Bait, Epic Bait", min: "28kg", max: "190kg" } },
+        { name: "Levi", img: "../assets/imgs/Levi.png", details: { location: "Hydra Island, Submerged Island, Tiki Outpost", bait: "Epic Bait, Frozen Bait", min: "13kg", max: "150kg" } },
+        { name: "Terrorbones", img: "../assets/imgs/Terrorbones.png", details: { location: "Tiki Outpost, Submerged Island, Prehistoric Island", bait: "Carnivore Bait, Abyssal Bait, Frozen Bait", min: "28kg", max: "190kg" } }
+    ],
+
+    unknown: [
+        { name: "Dragon Koi", img: "../assets/imgs/Dragon_Koi.png", details: { location: "???", bait: "???", min: "???", max: "???" } },
+        { name: "Hermit Crab", img: "../assets/imgs/HermitCrab.png", details: { location: "???", bait: "???", min: "???", max: "???" } },
+        { name: "Jellyfish", img: "../assets/imgs/JellyFish.png", details: { location: "???", bait: "???", min: "???", max: "???" } }
+    ],
+
+    info: {
+        text_label: "Peixes coletados:"
+    }
 };

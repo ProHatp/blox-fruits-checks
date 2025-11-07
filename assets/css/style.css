@@ -91,8 +91,8 @@ header p {
 /* ======== GRID ======== */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(80px,1fr));
-  gap:10px;
+  grid-template-columns:repeat(auto-fill,minmax(125px,1fr));
+  gap: 20px;
   padding:0 20px;
 }
 
@@ -134,12 +134,12 @@ h2{
   text-shadow:0 0 10px #00ff88;
   font-weight:bold;
 }
+
 @keyframes pulse{
   0%{box-shadow:0 0 10px #00ff88;}
-  50%{box-shadow:0 0 25px #00ff88;}
+  50%{box-shadow:0 0 12px #00ff88;}
   100%{box-shadow:0 0 10px #00ff88;}
 }
-
 .card.invalid{
   border-color:#ff0000;
   box-shadow:0 0 20px #ff0000aa;
@@ -156,7 +156,7 @@ h2{
 }
 @keyframes pulse_invalid{
   0%{box-shadow:0 0 10px #ff0040;}
-  50%{box-shadow:0 0 25px #4b0101;}
+  50%{box-shadow:0 0 12px #4b0101;}
   100%{box-shadow:0 0 10px #920202;}
 }
 
@@ -199,7 +199,7 @@ h2{
 }
 @keyframes pulse {
   0%{box-shadow:0 0 10px #00ff88;}
-  50%{box-shadow:0 0 25px #00ff88;}
+  50%{box-shadow:0 0 12px #00ff88;}
   100%{box-shadow:0 0 10px #00ff88;}
 }
 
@@ -233,4 +233,128 @@ h2{
   font-size:14px;
   z-index:1000;
   text-align:center;
+}
+
+.search-box {
+  text-align: center;
+  margin: 20px;
+}
+#searchInput {
+  padding: 10px 15px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  font-size: 16px;
+}
+.title-item {
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #1e1e1e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.title-id {
+  font-weight: bold;
+  color: #00bfff;
+  margin-right: 15px;
+}
+.title-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.title-info p {
+  margin: 3px 0 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.card.second-awakening {
+  border-color:#ff0099;
+  box-shadow:0 0 20px #ff0099aa;
+  background:linear-gradient(145deg,#3d0f2d,#290015);
+}
+.card.second-awakening.checked {
+  border-color:#ff66cc;
+  box-shadow:0 0 25px #ff66ccaa;
+  background:linear-gradient(145deg,#4d003d,#2a001f);
+}
+.fruit-extra {
+  margin-top:6px;
+  font-size:12px;
+  color:#ccc;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+}
+.fruit-extra input[type="number"] {
+  width:60px;
+  background:#111;
+  color:#fff;
+  border:1px solid #444;
+  border-radius:5px;
+  text-align:center;
+  padding:3px;
+  font-size:12px;
+  margin-top: 10px;
+}
+.awaken-label {
+  display:flex;
+  align-items:center;
+  gap: 0px;
+  color:#ff66cc;
+  font-size: 8px;
+}
+.mastery-label {
+  color:#00ff88;
+  font-size:12px;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.awaken-checkbox {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ff66cc;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: all .2s;
+}
+.awaken-checkbox:checked {
+  background-color: #ff66cc;
+  box-shadow: 0 0 10px #ff66ccaa;
+  align-items: center;
+  text-align: center;
+}
+.awaken-checkbox:checked::after {
+  content: "✔";
+  position: absolute;
+  top: -4px;
+  left: 0px;
+  font-size: 13px;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+.fish-info {
+  font-size: 11px;
+  color: #aaa;
+  line-height: 1.3em;
+  margin-top: 5px;
+}
+.fish-info strong {
+  color: #00ff88;
+}
+
+.fish-id {
+  display: block;
+  font-size: 10px;
+  color: #00bfff;
+  margin-top: 3px;
 }
