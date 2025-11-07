@@ -146,6 +146,7 @@ function updateCounter(c_data_items, counts, total, checked) {
   const awakenables = rarities.flatMap(r => (c_data_items[r] || []).filter(x => x.second_awakening));
   const awaken_done = awakenables.filter(x => awaken_saved.includes(x.name)).length;
 
+  // frutas permanentes
   const permanent_total = rarities.flatMap(r => c_data_items[r] || []).length;
   const permanent_done = permanent_saved.length;
 
@@ -158,7 +159,7 @@ function updateCounter(c_data_items, counts, total, checked) {
     🟨 Lendários: ${counts.legendary.collected}/${counts.legendary.total} ·
     🟥 Míticos: ${counts.mythical.collected}/${counts.mythical.total}
     ${awakenables.length ? `<br>🌙 Segundos Despertares: ${awaken_done}/${awakenables.length}` : ""}
-    <br>💎 Permanentes: ${permanent_done}/${permanent_total}
+    ${c_data_items.info.permanent ? `<br>💎 Permanentes: ${permanent_done}/${permanent_total}` : ""}
   `;
 }
 
