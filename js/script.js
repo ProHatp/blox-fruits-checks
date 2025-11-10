@@ -467,3 +467,98 @@ function updateRodsCounter(c_data_items, counts, total, collected) {
     🟥 Míticas: ${counts.mythical.collected}/${counts.mythical.total}
   `;
 }
+
+function renderFightingStyles(c_data_items) {
+  const saved = JSON.parse(localStorage.getItem("fighting_styles_collection") || "[]");
+  const mastery_saved = JSON.parse(localStorage.getItem("fighting_styles_mastery") || "{}");
+
+  const seas = ["first_sea", "second_sea", "third_sea"];
+  let total = 0, checked = 0;
+  const counts = {};
+
+  seas.forEach((sea) => {
+    const grid = document.querySelector(`#${sea} .grid`);
+    if (!grid) return;
+
+    let collected = 0;
+    c_data_items[sea].forEach((style) => {
+      total++;
+      const card = document.createElement("div");
+      card.className = "card";
+      card.dataset.name = style.name.toLowerCase();
+
+      if (saved.includes(style.name)) {
+        card.classList.add("checked");
+        collected++;
+        checked++;
+      }
+
+      // conteúdo visual do card
+      card.innerHTML = `
+        <img src="${style.img}" alt="${style.name}">
+        <span class="fruit-name">${style.name}</span>
+        <div class="fruit-extra">
+          <label class="mastery-label">
+            ⚔️ Mestria:
+            <input type="number" min="0" max="600" class="mastery-input" 
+              value="${mastery_saved[style.name] || 0}">
+          </label>
+        </div>
+      `;
+
+      // clique para marcar coletado
+      card.addEventListener("click", (e) => {
+        if (e.target.tagName === "INPUT" || e.target.tagName === "LABEL") return;
+
+        card.classList.toggle("checked");
+        let cur = JSON.parse(localStorage.getItem("fighting_styles_collection") || "[]");
+        if (card.classList.contains("checked")) {
+          if (!cur.includes(style.name)) cur.push(style.name);
+        } else {
+          cur = cur.filter((x) => x !== style.name);
+        }
+        localStorage.setItem("fighting_styles_collection", JSON.stringify(cur));
+        updateFightingStylesCounter(c_data_items);
+      });
+
+      // controle de mestria
+      const masteryInput = card.querySelector(".mastery-input");
+      masteryInput.addEventListener("input", () => {
+        let mastery = JSON.parse(localStorage.getItem("fighting_styles_mastery") || "{}");
+        mastery[style.name] = parseInt(masteryInput.value) || 0;
+        localStorage.setItem("fighting_styles_mastery", JSON.stringify(mastery));
+      });
+
+      grid.appendChild(card);
+    });
+
+    counts[sea] = { total: c_data_items[sea].length, collected };
+  });
+
+  updateFightingStylesCounter(c_data_items, counts, total, checked);
+}
+
+function updateFightingStylesCounter(c_data_items, counts, total, checked) {
+  const saved = JSON.parse(localStorage.getItem("fighting_styles_collection") || "[]");
+  const seas = ["first_sea", "second_sea", "third_sea"];
+
+  total = 0;
+  checked = 0;
+  counts = {};
+
+  seas.forEach((sea) => {
+    const arr = c_data_items[sea] || [];
+    const collected = arr.filter((x) => saved.includes(x.name)).length;
+    counts[sea] = { total: arr.length, collected };
+    total += arr.length;
+    checked += collected;
+  });
+
+  const c = document.getElementById("counter");
+  c.innerHTML = `
+    <strong>${c_data_items.info.text_label}</strong> ${checked}/${total}<br>
+    🌊 1º Mar: ${counts.first_sea.collected}/${counts.first_sea.total} · 
+    🌊 2º Mar: ${counts.second_sea.collected}/${counts.second_sea.total} · 
+    🌊 3º Mar: ${counts.third_sea.collected}/${counts.third_sea.total}
+  `;
+}

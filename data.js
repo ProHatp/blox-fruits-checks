@@ -1257,3 +1257,30 @@ const data_fishing_rods = {
         trust_label: "Confiança Mínima Necessária"
     }
 };
+
+const data_fighting_styles = {
+    first_sea: [
+        { name: "Combat", img: "./assets/imgs/Combat.png" },
+        { name: "Dark Step", img: "./assets/imgs/Dark_Step.png" },
+        { name: "Electric", img: "./assets/imgs/Electric.png" },
+        { name: "Water Kung Fu", img: "./assets/imgs/Water_Kung_Fu.png" }
+    ],
+
+    second_sea: [
+        { name: "Dragon Breath", img: "./assets/imgs/Dragon_Breath.png" },
+        { name: "Superhuman", img: "./assets/imgs/Superhuman.png" },
+        { name: "Death Step", img: "./assets/imgs/Death_Step.png" },
+        { name: "Sharkman Karate", img: "./assets/imgs/Sharkman_Karate.png" }
+    ],
+
+    third_sea: [
+        { name: "Electric Claw", img: "./assets/imgs/Electric_Claw.png" },
+        { name: "Dragon Talon", img: "./assets/imgs/Dragon_Talon.png" },
+        { name: "Godhuman", img: "./assets/imgs/Godhuman.png" },
+        { name: "Sanguine Art", img: "./assets/imgs/Sanguine_Art.png" }
+    ],
+
+    info: {
+        text_label: "Estilos de Luta Coletados:"
+    }
+};

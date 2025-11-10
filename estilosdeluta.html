@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coleção Blox Fruits — 🎣 Blox Fruits Checks</title>
+  <title>Estilos de Luta — 🥋 Blox Fruits Checks</title>
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="data.js"></script>
 </head>
@@ -15,34 +15,31 @@
     <a href="frutas.html">🍎 Frutas</a>
     <a href="titles.html">🏅 Títulos</a>
     <a href="peixes.html">🐟 Peixes</a>
-    <a href="varas.html" class="active">🎣 Varas de Pesca</a>
-    <a href="estilosdeluta.html">🥋 Estilos de Luta</a>
+    <a href="varas.html">🎣 Varas de Pesca</a>
+    <a href="estilosdeluta.html" class="active">🥋 Estilos de Luta</a>
   </nav>
 
-  <section id="common">
-    <h2>🟦 Comuns</h2>
+  <div class="header_distance"></div>
+
+  <section id="first_sea">
+    <h2>🌊 Primeiro Mar</h2>
+    <div class="grid"></div>
   </section>
 
-  <section id="uncommon">
-    <h2>🟩 Incomuns</h2>
+  <section id="second_sea">
+    <h2>🌊 Segundo Mar</h2>
+    <div class="grid"></div>
   </section>
 
-  <section id="rare">
-    <h2>🟪 Raras</h2>
-  </section>
-
-  <section id="legendary">
-    <h2>🟨 Lendárias</h2>
-  </section>
-
-  <section id="mythical">
-    <h2>🟥 Míticas</h2>
+  <section id="third_sea">
+    <h2>🌊 Terceiro Mar</h2>
+    <div class="grid"></div>
   </section>
 
   <div id="counter" class="counter"></div>
   <div class="footer_distance"></div>
 
   <script src="js/script.js"></script>
-  <script>renderFishingRods(data_fishing_rods);</script>
+  <script>renderFightingStyles(data_fighting_styles);</script>
 </body>
 </html>
