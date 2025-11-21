@@ -227,11 +227,10 @@ const data_fruits = {
     { name: "Buddha", img: "./assets/imgs/Buddha_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
     { name: "Love", img: "./assets/imgs/Love_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Creation", img: "./assets/imgs/Creation_Fruit.png", mestria_level: 0, permanent: false },
-    { name: "Spider", img: "./assets/imgs/Spider_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Spider", img: "./assets/imgs/Spider_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
     { name: "Sound", img: "./assets/imgs/Sound_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Phoenix", img: "./assets/imgs/Phoenix_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
     { name: "Portal", img: "./assets/imgs/Portal_Fruit.png", mestria_level: 0, permanent: false },
-
     { name: "Lightning", img: "./assets/imgs/Lightning_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
     { name: "Pain", img: "./assets/imgs/Pain_Fruit.png", second_awakening: true, she_was_awakened: false, mestria_level: 0, permanent: false },
     { name: "Blizzard", img: "./assets/imgs/Blizzard_Fruit.png", mestria_level: 0, permanent: false }
@@ -248,6 +247,7 @@ const data_fruits = {
     { name: "Gas", img: "./assets/imgs/Gas_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Spirit", img: "./assets/imgs/Spirit_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Leopard", img: "./assets/imgs/Leopard_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Werewolf", img: "./assets/imgs/Werewolf_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Yeti", img: "./assets/imgs/Yeti_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Kitsune", img: "./assets/imgs/Kitsune_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Dragon", img: "./assets/imgs/Dragon_Fruit.png", mestria_level: 0, permanent: false }
