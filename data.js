@@ -31,6 +31,7 @@ const data_guns = {
   info: {
     text_label: "Armas coletadas:",
     maestria: true,
+    enchanted: true,
   }
 };
 
@@ -192,6 +193,7 @@ const data_swords = {
   info: {
     text_label: "Espadas coletadas:",
     maestria: true,
+    enchanted: true,
   }
 };
 

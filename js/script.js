@@ -3,6 +3,7 @@ function renderItems(c_data_items) {
   const awaken_saved = JSON.parse(localStorage.getItem("awakened_fruits") || "[]");
   const permanent_saved = JSON.parse(localStorage.getItem("permanent_fruits") || "[]");
   const mastery_saved = JSON.parse(localStorage.getItem("fruit_mastery") || "{}");
+  const enchanted_saved = JSON.parse(localStorage.getItem("enchanted_items") || "[]");
 
   let total = 0, checked = 0;
   const rarities = ["common", "uncommon", "rare", "legendary", "mythical"];
@@ -37,6 +38,14 @@ function renderItems(c_data_items) {
             ? `<label class="awaken-label">
                 <input type="checkbox" class="awaken-checkbox" ${awaken_saved.includes(item.name) ? "checked" : ""}>
                 🌙 Segundo Despertar
+               </label>`
+            : ""
+          }
+
+          ${c_data_items.info.enchanted
+            ? `<label class="enchant-label">
+                <input type="checkbox" class="enchant-checkbox" ${enchanted_saved.includes(item.name) ? "checked" : ""}>
+                ✨ Encantada
                </label>`
             : ""
           }
@@ -105,6 +114,23 @@ function renderItems(c_data_items) {
         });
       }
 
+      // Controle: item enchanted
+      const enchantedBox = card.querySelector(".enchant-checkbox");
+      if (enchantedBox) {
+        enchantedBox.addEventListener("change", () => {
+          let enchantList = JSON.parse(localStorage.getItem("enchanted_items") || "[]");
+
+          if (enchantedBox.checked) {
+            if (!enchantList.includes(item.name)) enchantList.push(item.name);
+          } else {
+            enchantList = enchantList.filter((x) => x !== item.name);
+          }
+
+          localStorage.setItem("enchanted_items", JSON.stringify(enchantList));
+          updateCounter(c_data_items);
+        });
+      }
+
       // Controle: mestria
       if (c_data_items.info.maestria) {
         const masteryInput = card.querySelector(".mastery-input");
@@ -129,6 +155,7 @@ function updateCounter(c_data_items, counts, total, checked) {
   const saved = JSON.parse(localStorage.getItem("collection") || "[]");
   const awaken_saved = JSON.parse(localStorage.getItem("awakened_fruits") || "[]");
   const permanent_saved = JSON.parse(localStorage.getItem("permanent_fruits") || "[]");
+  const enchanted_saved = JSON.parse(localStorage.getItem("enchanted_items") || "[]");
   const rarities = ["common", "uncommon", "rare", "legendary", "mythical"];
 
   checked = 0;
@@ -150,6 +177,10 @@ function updateCounter(c_data_items, counts, total, checked) {
   const permanent_total = rarities.flatMap(r => c_data_items[r] || []).length;
   const permanent_done = permanent_saved.length;
 
+    // Armas e espadas encantas
+  const enchanted_total = rarities.flatMap(r => c_data_items[r] || []).length;
+  const enchanted_done = permanent_saved.length;
+
   const c = document.getElementById("counter");
   c.innerHTML = `
     <strong>${c_data_items.info.text_label}</strong> ${checked}/${total}<br>
@@ -160,6 +191,7 @@ function updateCounter(c_data_items, counts, total, checked) {
     🟥 Míticos: ${counts.mythical.collected}/${counts.mythical.total}
     ${awakenables.length ? `<br>🌙 Segundos Despertares: ${awaken_done}/${awakenables.length}` : ""}
     ${c_data_items.info.permanent ? `<br>💎 Permanentes: ${permanent_done}/${permanent_total}` : ""}
+    ${c_data_items.info.enchanted ? `<br>✨ Encantada: ${enchanted_done}/${enchanted_total}` : ""}
   `;
 }
 
