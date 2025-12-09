@@ -179,7 +179,7 @@ function updateCounter(c_data_items, counts, total, checked) {
 
     // Armas e espadas encantas
   const enchanted_total = rarities.flatMap(r => c_data_items[r] || []).length;
-  const enchanted_done = permanent_saved.length;
+  const enchanted_done = enchanted_saved.length;
 
   const c = document.getElementById("counter");
   c.innerHTML = `
