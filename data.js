@@ -124,7 +124,11 @@ const data_items = {
     { name: "Dark Coat", img: "./assets/imgs/Dark_Coat.png" },
     { name: "Celestial Helmet", img: "./assets/imgs/Celestial_Helmet.png" },
     { name: "Coven Witch Hat", img: "./assets/imgs/Coven_Witch_Hat.webp" },
-    { name: "Pumpkin Mask", img: "./assets/imgs/Pumpkin_Mask.webp" },
+    { name: "Pumpkin Mask", img: "./assets/imgs/Pumpkin_Mask.png" },
+
+    { name: "Frosty Helmet", img: "./assets/imgs/Frosty_Helmet.png" },
+    { name: "Peppermint Helmet", img: "./assets/imgs/Peppermint_Helmet.png" },
+    { name: "Red Ribbon", img: "./assets/imgs/Red_Ribbon.png" },
   ],
 
   info: {

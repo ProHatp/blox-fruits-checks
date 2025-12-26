@@ -2,7 +2,7 @@ import fs from "fs";
 import https from "https";
 import puppeteer from "puppeteer";
 
-const WIKI_URL = "https://blox-fruits.fandom.com/wiki/Fighting_Styles";
+const WIKI_URL = "https://blox-fruits.fandom.com/wiki/Accessories";
 const DIR = "./assets/imgs";
 
 function limparNome(url) {
