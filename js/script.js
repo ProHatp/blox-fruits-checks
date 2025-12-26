@@ -6,7 +6,7 @@ function renderItems(c_data_items) {
   const enchanted_saved = JSON.parse(localStorage.getItem("enchanted_items") || "[]");
 
   let total = 0, checked = 0;
-  const rarities = ["common", "uncommon", "rare", "legendary", "mythical"];
+  const rarities = ["common", "uncommon", "rare", "legendary", "mythical", "mutations"];
   const counts = {};
 
   rarities.forEach((r) => {
@@ -156,7 +156,7 @@ function updateCounter(c_data_items, counts, total, checked) {
   const awaken_saved = JSON.parse(localStorage.getItem("awakened_fruits") || "[]");
   const permanent_saved = JSON.parse(localStorage.getItem("permanent_fruits") || "[]");
   const enchanted_saved = JSON.parse(localStorage.getItem("enchanted_items") || "[]");
-  const rarities = ["common", "uncommon", "rare", "legendary", "mythical"];
+  const rarities = ["common", "uncommon", "rare", "legendary", "mythical", "mutations"];
 
   checked = 0;
   total = 0;
@@ -166,7 +166,7 @@ function updateCounter(c_data_items, counts, total, checked) {
     const arr = c_data_items[r] || [];
     const collected = arr.filter((x) => saved.includes(x.name)).length;
     counts[r] = { total: arr.length, collected };
-    total += arr.length;
+    if(r != "mutations") total += arr.length;
     checked += collected;
   });
 
@@ -174,7 +174,7 @@ function updateCounter(c_data_items, counts, total, checked) {
   const awaken_done = awakenables.filter(x => awaken_saved.includes(x.name)).length;
 
   // frutas permanentes
-  const permanent_total = rarities.flatMap(r => c_data_items[r] || []).length;
+  const permanent_total = rarities.flatMap(r => (r != "mutations") && c_data_items[r] || []).length;
   const permanent_done = permanent_saved.length;
 
     // Armas e espadas encantas
@@ -189,6 +189,7 @@ function updateCounter(c_data_items, counts, total, checked) {
     🟪 Raros: ${counts.rare.collected}/${counts.rare.total} ·
     🟨 Lendários: ${counts.legendary.collected}/${counts.legendary.total} ·
     🟥 Míticos: ${counts.mythical.collected}/${counts.mythical.total}
+    ⬜ Mutações: ${counts.mutations.collected}/${counts.mutations.total}
     ${awakenables.length ? `<br>🌙 Segundos Despertares: ${awaken_done}/${awakenables.length}` : ""}
     ${c_data_items.info.permanent ? `<br>💎 Permanentes: ${permanent_done}/${permanent_total}` : ""}
     ${c_data_items.info.enchanted ? `<br>✨ Encantada: ${enchanted_done}/${enchanted_total}` : ""}

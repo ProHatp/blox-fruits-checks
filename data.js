@@ -249,10 +249,14 @@ const data_fruits = {
     { name: "Gas", img: "./assets/imgs/Gas_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Spirit", img: "./assets/imgs/Spirit_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Leopard", img: "./assets/imgs/Leopard_Fruit.png", mestria_level: 0, permanent: false },
-    { name: "Werewolf", img: "./assets/imgs/Werewolf_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Yeti", img: "./assets/imgs/Yeti_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Kitsune", img: "./assets/imgs/Kitsune_Fruit.png", mestria_level: 0, permanent: false },
     { name: "Dragon", img: "./assets/imgs/Dragon_Fruit.png", mestria_level: 0, permanent: false }
+  ],
+
+  mutations: [
+    { name: "Werewolf", img: "./assets/imgs/Werewolf_Fruit.png", mestria_level: 0, permanent: false },
+    { name: "Empyrean", img: "./assets/imgs/Empyrean_Fruit.png", mestria_level: 0, permanent: false },
   ],
 
   info: {
