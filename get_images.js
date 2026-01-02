@@ -2,7 +2,7 @@ import fs from "fs";
 import https from "https";
 import puppeteer from "puppeteer";
 
-const WIKI_URL = "https://blox-fruits.fandom.com/wiki/Accessories";
+const WIKI_URL = "https://blox-fruits.fandom.com/wiki/Fish";
 const DIR = "./assets/imgs";
 
 function limparNome(url) {

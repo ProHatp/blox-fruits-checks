@@ -1105,7 +1105,8 @@ const data_fish_local = {
         { id: 46, name: "Starfish (Blue)", img: "./assets/imgs/Starfish_(Blue).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
         { id: 47, name: "Starfish (Green)", img: "./assets/imgs/Starfish_(Green).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
         { id: 48, name: "Starfish (Pink)", img: "./assets/imgs/Starfish_(Pink).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
-        { id: 49, name: "Starfish (Red)", img: "./assets/imgs/Starfish_(Red).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } }
+        { id: 49, name: "Starfish (Red)", img: "./assets/imgs/Starfish_(Red).png", details: { location: "Any", bait: "Any", min: "1kg", max: "12kg" } },
+        { id: 60, name: "Gingerbread Sturgeon", img: "./assets/imgs/Gingerbread_Sturgeon.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37g" } },
     ],
 
     uncommon: [
@@ -1122,6 +1123,7 @@ const data_fish_local = {
         { id: 44, name: "Turtle", img: "./assets/imgs/Turtle.png", details: { location: "Whirlpool", bait: "Any", min: "3kg", max: "48kg" } },
         { id: 53, name: "Jester Clownfish", img: "./assets/imgs/Jester_Clownfish.png", details: { location: "Any", bait: "Any", min: "5kg", max: "37kg" } },
         { id: 54, name: "Zombie Bass", img: "./assets/imgs/Zombie_Bass.png", details: { location: "Any", bait: "Any (Easier with Carnivore Bait)", min: "5kg", max: "35kg" } },
+        { id: 58, name: "Reindeer Bullfish", img: "./assets/imgs/Reindeer_Bullfish.png", details: { location: "Any", bait: "Any(Easier with Carnivore Bait)", min: "4kg", max: "33kg" } },
         { id: "N/A", name: "Soggy Boot", img: "./assets/imgs/Soggy_Boot.png", details: { location: "Any", bait: "Any", min: "N/A", max: "N/A" } }
     ],
 
@@ -1135,7 +1137,8 @@ const data_fish_local = {
         { id: 40, name: "Swamp Lurker", img: "./assets/imgs/Swamp_Lurker.png", details: { location: "Whirlpool", bait: "Any", min: "76kg", max: "210kg" } },
         { id: 50, name: "Lumo Whale", img: "./assets/imgs/Lumo_Whale.png", details: { location: "Whirlpool", bait: "Any", min: "110kg", max: "376kg" } },
         { id: 51, name: "Deepsea Octopus", img: "./assets/imgs/Deepsea_Octopus.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "???" } },
-        { id: 52, name: "Jack-O-Fish", img: "./assets/imgs/Jack-O-Fish.png", details: { location: "Any", bait: "Any (Easier with Abyssal Bait)", min: "6kg", max: "41kg" } }
+        { id: 52, name: "Jack-O-Fish", img: "./assets/imgs/Jack-O-Fish.png", details: { location: "Any", bait: "Any (Easier with Abyssal Bait)", min: "6kg", max: "41kg" } },
+        { id: 61, name: "Peppermint Fish", img: "./assets/imgs/Peppermint_Fish.png", details: { location: "Any", bait: "Any(Easier with Abyssal Bait)", min: "6kg", max: "47kg" } },
     ],
 
     legendary: [
@@ -1144,8 +1147,9 @@ const data_fish_local = {
         { id: 23, name: "Deepglow Oarfish", img: "./assets/imgs/Deepglow_Oarfish.png", details: { location: "Cursed Ship (Glitched Out)", bait: "Abyssal Bait", min: "18kg", max: "121kg" } },
         { id: 25, name: "Angler (Fish)", img: "./assets/imgs/Angler.png", details: { location: "Cursed Ship, Haunted Castle", bait: "Abyssal Bait", min: "4kg", max: "32kg" } },
         { id: 28, name: "Rock Dweller", img: "./assets/imgs/Rock_Dweller.png", details: { location: "Magma Village, Prehistoric Island", bait: "Any (Easier with Epic Bait)", min: "21kg", max: "145kg" } },
-        { id: 45, name: "Deepsea Squid", img: "./assets/imgs/Deapsea_squid.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "33.44kg" } },
-        { id: "??", name: "Vampire Squid", img: "./assets/imgs/Vampire_Squid.png", details: { location: "???", bait: "???", min: "???", max: "???" } }
+        { id: 45, name: "Deepsea Squid", img: "./assets/imgs/Deepsea_Squid.png", details: { location: "Whirlpool", bait: "Any", min: "8kg", max: "33.44kg" } },
+        { id: 56, name: "Vampire Squid", img: "./assets/imgs/Vampire_Squid.png", details: { location: "???", bait: "???", min: "???", max: "???" } },
+        { id: 59, name: "Snowman Marlin", img: "./assets/imgs/Snowman_Marlin.png", details: { location: "Any", bait: "Any(Easier with Abyssal Bait)", min: "72kg", max: "483kg" } },
     ],
 
     mythical: [
@@ -1158,7 +1162,7 @@ const data_fish_local = {
     unknown: [
         { id: 37, name: "Dragon Koi", img: "./assets/imgs/Dragon_Koi.png", details: { location: "???", bait: "???", min: "???", max: "???" } },
         { id: 41, name: "Hermit Crab", img: "./assets/imgs/HermitCrab.png", details: { location: "???", bait: "???", min: "???", max: "???" } },
-        { id: 43, name: "Jellyfish", img: "./assets/imgs/JellyFish.png", details: { location: "???", bait: "???", min: "???", max: "???" } }
+        { id: 43, name: "Jellyfish", img: "./assets/imgs/JellyFish.png", details: { location: "???", bait: "???", min: "???", max: "???" } },
     ],
 
     info: {

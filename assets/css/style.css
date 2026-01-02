@@ -451,9 +451,10 @@ h2{
 .permanent-checkbox:checked::after {
   content: "★";
   position: absolute;
-  top: -2px;
-  left: 1px;
-  font-size: 12px;
+  top: -5px;
+  right: -1px;
+  /* left: 0px; */
+  font-size: 15px;
   color: #fff;
   text-shadow: 0 0 5px #000;
 }
