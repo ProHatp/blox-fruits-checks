@@ -275,81 +275,117 @@ function searchTitles() {
 
 function renderFish(c_data_items) {
   const saved = JSON.parse(localStorage.getItem("fish_collection") || "[]");
-  let total = 0, checked = 0;
-  const rarities = ["common", "uncommon", "rare", "legendary", "mythical", "unknown"];
-  const counts = {};
 
-  // ====== BARRA DE PESQUISA ======
-  const searchBox = document.createElement("div");
-  searchBox.className = "search-box";
-  searchBox.innerHTML = `
-    <input type="text" id="searchInput" placeholder="🔍 Buscar peixe por nome ou ID...">
-  `;
-  document.body.insertBefore(searchBox, document.querySelector(".header_distance").nextSibling);
+  // Junta todos os peixes
+  const allFish = [
+    ...c_data_items.common,
+    ...c_data_items.uncommon,
+    ...c_data_items.rare,
+    ...c_data_items.legendary,
+    ...c_data_items.mythical,
+    ...c_data_items.unknown
+  ];
 
-  // ====== RENDERIZAÇÃO ======
-  rarities.forEach((r) => {
-    const grid = document.getElementById(r);
-    if (!grid) return;
+  // ========= BARRA =========
+  if (!document.getElementById("searchInput")) {
+    const searchBox = document.createElement("div");
+    searchBox.className = "search-box";
+    searchBox.innerHTML = `
+      <input type="text" id="searchInput" placeholder="🔍 Buscar peixe por nome ou ID...">
+      <select id="sortSelect" class="sort-select">
+        <option value="id-asc">🔢 ID Crescente</option>
+        <option value="id-desc">🔢 ID Decrescente</option>
+        <option value="name-asc">🔤 Nome A → Z</option>
+        <option value="name-desc">🔤 Nome Z → A</option>
+      </select>
+    `;
+    document.body.insertBefore(searchBox, document.querySelector(".header_distance").nextSibling);
+  }
 
-    let collected = 0;
-    c_data_items[r].forEach((item) => {
-      total++;
-      const fishId = item.id.toString().padStart(3, "0");
+  const searchInput = document.getElementById("searchInput");
+  const sortSelect = document.getElementById("sortSelect");
 
-      const card = document.createElement("div");
-      card.className = "card";
-      card.dataset.name = item.name.toLowerCase();
-      card.dataset.id = fishId;
+  function sortFish(arr, mode) {
+    return [...arr].sort((a, b) => {
+      const idA = a.id === "N/A" ? 9999 : Number(a.id);
+      const idB = b.id === "N/A" ? 9999 : Number(b.id);
 
-      if (saved.includes(item.name)) {
+      if (mode === "id-asc") return idA - idB;
+      if (mode === "id-desc") return idB - idA;
+      if (mode === "name-asc") return a.name.localeCompare(b.name);
+      if (mode === "name-desc") return b.name.localeCompare(a.name);
+      return 0;
+    });
+  }
+
+  // ========= GRID =========
+  const grid = document.getElementById("fishGrid");
+  grid.innerHTML = "";
+
+  const sorted = sortFish(allFish, sortSelect.value);
+
+  let total = sorted.length;
+  let checked = 0;
+
+  sorted.forEach(item => {
+    const fishId = item.id === "N/A" ? "???" : String(item.id).padStart(3, "0");
+
+    const card = document.createElement("div");
+    card.className = "card";
+    card.dataset.name = item.name.toLowerCase();
+    card.dataset.id = fishId;
+
+    if (saved.includes(item.name)) {
+      card.classList.add("checked");
+      checked++;
+    }
+
+    card.innerHTML = `
+      <img src="${item.img}" alt="${item.name}">
+      <span class="fish-id">#${fishId}</span>
+      <span class="fish-name">${item.name}</span>
+      <div class="fish-info">
+        <small><strong>📍 Local:</strong> ${item.details.location}</small><br>
+        <small><strong>🪱 Isca:</strong> ${item.details.bait}</small><br>
+        <small><strong>⚖️ Peso:</strong> ${item.details.min} — ${item.details.max}</small>
+      </div>
+    `;
+
+    card.onclick = () => {
+      let cur = JSON.parse(localStorage.getItem("fish_collection") || "[]");
+
+      if (cur.includes(item.name)) {
+        cur = cur.filter(x => x !== item.name);
+        card.classList.remove("checked");
+      } else {
+        cur.push(item.name);
         card.classList.add("checked");
-        collected++;
-        checked++;
       }
 
-      card.innerHTML = `
-        <img src="${item.img}" alt="${item.name}">
-        <span class="fish-id">#${fishId}</span>
-        <span class="fish-name">${item.name}</span>
-        <div class="fish-info">
-          <small><strong>📍 Local:</strong> ${item.details.location}</small><br>
-          <small><strong>🪱 Isca:</strong> ${item.details.bait}</small><br>
-          <small><strong>⚖️ Peso:</strong> ${item.details.min} — ${item.details.max}</small>
-        </div>
-      `;
+      localStorage.setItem("fish_collection", JSON.stringify(cur));
+      renderFish(c_data_items);
+    };
 
-      // Clique para marcar/desmarcar coletado
-      card.addEventListener("click", () => {
-        card.classList.toggle("checked");
-        const cur = JSON.parse(localStorage.getItem("fish_collection") || "[]");
-        if (card.classList.contains("checked")) {
-          if (!cur.includes(item.name)) cur.push(item.name);
-        } else {
-          const i = cur.indexOf(item.name);
-          if (i > -1) cur.splice(i, 1);
-        }
-        localStorage.setItem("fish_collection", JSON.stringify(cur));
-        updateFishCounter(c_data_items);
-      });
-
-      grid.appendChild(card);
-    });
-    counts[r] = { total: c_data_items[r].length, collected };
+    grid.appendChild(card);
   });
 
-  // ====== PESQUISA AO DIGITAR ======
-  const searchInput = document.getElementById("searchInput");
-  searchInput.addEventListener("input", (e) => {
-    const query = e.target.value.toLowerCase().trim();
-    document.querySelectorAll(".card").forEach((card) => {
-      const nameMatch = card.dataset.name.includes(query);
-      const idMatch = card.dataset.id.includes(query);
-      card.style.display = query === "" || nameMatch || idMatch ? "block" : "none";
+  // ========= BUSCA =========
+  searchInput.oninput = () => {
+    const q = searchInput.value.toLowerCase().trim();
+    document.querySelectorAll(".card").forEach(card => {
+      card.style.display =
+        card.dataset.name.includes(q) || card.dataset.id.includes(q) || q === ""
+          ? "block"
+          : "none";
     });
-  });
+  };
 
-  updateFishCounter(c_data_items, counts, total, checked);
+  // ========= REORDENAR =========
+  sortSelect.onchange = () => renderFish(c_data_items);
+
+  // ========= CONTADOR =========
+  const counter = document.getElementById("counter");
+  counter.innerHTML = `<strong>Peixes coletados:</strong> ${checked}/${total}`;
 }
 
 function updateFishCounter(c_data_items, counts, total, checked) {
