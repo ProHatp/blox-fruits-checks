@@ -2,7 +2,7 @@ import fs from "fs";
 import https from "https";
 import puppeteer from "puppeteer";
 
-const WIKI_URL = "https://blox-fruits.fandom.com/wiki/Fiend";
+const WIKI_URL = "https://blox-fruits.fandom.com/wiki/Easter_Egg_Hunt";
 const DIR = "./assets/imgs";
 
 function limparNome(url) {
